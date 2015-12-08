@@ -29,7 +29,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -115,22 +114,15 @@
                         <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Learn More</a></p>
                         </div>
                     </div>
-
         </div>
-
     </section>
 
     <!-- Download Section -->
     <section id="tickets" class="content-section text-center">
         <div class="download-section">
-            INSTAGRAM
-            <!-- <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>BUY TICKETS for the Annual Project RISHI Conference.</h2>
-                    <p>Tickets are on sale now. </p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Buy Tickets</a>
-                </div>
-            </div> -->
+            <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+                <div class="carousel-inner" id="projectrishi"></div>
+            </div>
         </div>
     </section>
 
@@ -245,6 +237,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
@@ -253,6 +246,28 @@
     <script src="js/grayscale.js"></script>
     <script type="text/javascript" src="js/instafeed.js"></script>
 
+    <!-- Instafeed JavaScript -->
+    <script src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        target: 'onerishi',
+        tagName: 'onerishi',
+        resolution: 'low_resolution',
+        clientId: '2d276c7bc8e940e9a47c4432667c7972'
+    });
+    var mainfeed = new Instafeed({
+        get: 'tagged',
+        target: 'projectrishi',
+        limit: 4,
+        soryBy:'most-recent',
+        tagName: 'projectrishi',
+        resolution: 'low_resolution',
+        clientId: '2d276c7bc8e940e9a47c4432667c7972'
+    });
+    feed.run();
+    mainfeed.run();
+    </script>
 </body>
 
 </html>
