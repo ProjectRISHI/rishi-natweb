@@ -1,0 +1,11 @@
+*~
+*#
+*.pyc
+*.DS_Store
+*.csv
+*.twb
+*.tde
+*.xlsx
+*.jpg
+*.ipynb_checkpoints
+*.settings
