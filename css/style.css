@@ -237,6 +237,54 @@ a:focus {
     }
 }
 
+.intro_sub {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.intro_sub .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro_sub .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.intro_sub .intro-body .intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:768px) {
+    .intro_sub {
+        padding: 0;
+        height: 60%;
+    }
+
+    .intro_sub .intro-body .brand-heading {
+        font-size: 20px;
+    }
+
+    .intro_sub .intro-body .intro-text {
+        font-size: 26px;
+    }
+}
+
+.donate {
+    background: url(../img/main.png) no-repeat bottom center scroll;
+}
+
+
 .btn-circle {
     width: 70px;
     height: 70px;
