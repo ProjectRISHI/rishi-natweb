@@ -318,9 +318,9 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
     color: #fff;
-    background: url(../img/india.jpg) no-repeat center center scroll;
+    background: url() no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
