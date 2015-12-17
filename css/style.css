@@ -461,6 +461,10 @@ a:focus {
     background-color: #F16822;
 }
 
+.btn-orange:hover {
+    color:#000;
+}
+
 .btn-default:hover,
 .btn-default:focus {
     border: 1px solid #7291CA;
