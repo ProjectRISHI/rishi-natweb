@@ -360,9 +360,44 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
-
+    padding-top: 50px;
 }
+
+.orange-section {
+    width: 100%;
+    padding-top:50px;
+    background-color: #F16822;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.img-section-1 {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url() no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.grey-section {
+    width: 100%;
+    padding-top: 50px;
+    background: url() no-repeat center center scroll;
+    background-color: #EAE8EA;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+} 
 
 .download-section {
     width: 100%;
@@ -401,6 +436,7 @@ a:focus {
     
 }
 
+
 .apply {
     width: 100%;
     padding: 10px 0;
@@ -416,6 +452,21 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+
+    .orange-section {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+
+    .img-section-1 {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+
+    .grey-section {
         padding-top: 90px;
         padding-bottom: 50px;
     }
