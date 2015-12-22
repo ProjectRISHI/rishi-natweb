@@ -100,19 +100,47 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="container">
-                    <div class="row">
-                        <div align="left" class="col-md-6 col-md-offset-0">
-                            <h3 style="color:#5d5d5d">Our Projects</h3>
-                            <br>
+<!--             <div class="row">
+                <div align="left" class="col-md-6">
+                    <h3 style="color:#5d5d5d">Our Projects</h3>
+                    <br>
+                </div>
+            </div> -->
+            <div class="row">
+                <div align="left" class="col-md-6">
+                    <h3 style="color:#5d5d5d">Our Projects</h3>
+                    <br>
+                    <p style="color:#5d5d5d">We Focus on key developmental disparities that challenge our target village populations. After thoroughly understanding the severity of conditions relevant to each disparity, we research currently-existing solutions developed by social enterprises that have been successful in alleviating the burden of these disparities. Project RISHI catalyzes positive change by effectively bringing these affordable and sustainable solutions to our partnering villagers and evaluating each initiative's impact.</p>
+                    <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Learn More</a></p>
+                </div>
+                <div class="col-md-6 grey-vert">
+                    <div align="left" class="col-sm-6">
+                        <div class="row">
+                        <p style="color:#5d5d5d">Click on disparity to learn more</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-0">
-                        <p  align="left" style="color:#5d5d5d">We Focus on key developmental disparities that challenge our target village populations. After thoroughly understanding the severity of conditions relevant to each disparity, we research currently-existing solutions developed by social enterprises that have been successful in alleviating the burden of these disparities. Project RISHI catalyzes positive change by effectively bringing these affordable and sustainable solutions to our partnering villagers and evaluating each initiative's impact.
-                        </p>
-                        <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Learn More</a></p>
+                        <div class="row"> 
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Health" data-content="We provide access to health care service through affordable emergency ambulance services, healthcare education, affordable health camps and fully funded rural health clinics."><img height="50" width="50" src="img/project_icons/health.png"/></a><font style="color:#5d5d5d"> Health</font>
                         </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Water" data-content="We decrease the incidence of waterborne diseases with safe drinking water kiosks, water delivery services, affordable filtration systems and practical sanitation solutions."><img height="50" width="50" src="img/project_icons/water.png"/></a><font style="color:#5d5d5d"> Water</font>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Education" data-content="We support education through tutoring programs, vocational training, career guidance, and technology advancements that will bridge the gap between urban and rural education."><img height="50" width="50" src="img/project_icons/education.png"/></a><font style="color:#5d5d5d"> Education</font>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Energy" data-content="We minimize the burden of expensive fuel costs by providing access to affordable hand-held solar power, distributed energy to rural communities, clean cookstoves, and bio-gasification systems."><img height="50" width="50" src="img/project_icons/energy.png"/></a><font style="color:#5d5d5d"> Energy</font>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Income Generation" data-content="We empower farmers and laborers to increase income through microfinance, agricultural technologies, access to mobile technology and other entrepreneurial driving solutions."><img height="50" width="50" src="img/project_icons/income.png"/></a><font style="color:#5d5d5d"> Income Generation</font>
+                        </div>
+                        <br>
                     </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -237,6 +265,12 @@
         clientId: '2d276c7bc8e940e9a47c4432667c7972'
     });
     mainfeed.run();
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+    });
     </script>
 </body>
 
