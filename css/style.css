@@ -283,6 +283,13 @@ a:focus {
     background: url(../img/main.png) no-repeat bottom center scroll;
 }
 
+.proj {
+    background: url(../img/banner/proj.png) no-repeat bottom center scroll;
+}
+
+.ban-2 {
+    background: url(../img/banner/ban_2.png) no-repeat bottom center scroll;
+}
 
 .btn-circle {
     width: 70px;
@@ -378,9 +385,7 @@ a:focus {
     width: 100%;
     height: auto;
     padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background: url() no-repeat bottom center scroll;
+    background: url(../img/proj_feat/feat_health.png) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
