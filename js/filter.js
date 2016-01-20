@@ -14,3 +14,5 @@ var $btns = $(".btn").on("click", function() {
     .fadeIn(450);
 
 });
+
+
