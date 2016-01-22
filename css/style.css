@@ -380,6 +380,15 @@ a:focus {
     -o-background-size: cover;
 }
 
+.blue-section {
+    width: 100%;
+    padding-top:50px;
+    background-color: #292D72;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
 .img-section-1 {
     display: table;
     width: 100%;
@@ -462,6 +471,11 @@ a:focus {
     }
 
     .orange-section {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+
+    .blue-section {
         padding-top: 90px;
         padding-bottom: 50px;
     }
