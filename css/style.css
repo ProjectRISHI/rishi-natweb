@@ -413,6 +413,17 @@ a:focus {
     -o-background-size: cover;
 } 
 
+.grey-2 {
+    width: 100%;
+    padding-top: 5px;
+    background: url() no-repeat center center scroll;
+    background-color: #C7C7C7;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+} 
+
 .download-section {
     width: 100%;
     padding: 20px 0;
@@ -488,6 +499,11 @@ a:focus {
     .grey-section {
         padding-top: 90px;
         padding-bottom: 50px;
+    }
+
+    .grey-2 {
+        height: auto;
+        margin-top: 0px;
     }
 
     .sec {
