@@ -348,6 +348,8 @@ a:focus {
     }
 }
 
+
+
 @-moz-keyframes pulse {    
     0% {
         -moz-transform: scale(1);
