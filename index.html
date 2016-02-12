@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="/">
                     <font color="#F16822">Project</font><span class="light"><font color="#21A54A">RISHI</font></span>
                 </a>
             </div>
@@ -55,16 +54,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Chapters</a>
+                        <a class="page-scroll" href="chapters">Chapters</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#speakers">Projects</a>
+                        <a class="page-scroll" href="projects">Projects</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#schedule">Multimedia</a>
+                        <a class="page-scroll" href="blog">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#venue">About</a>
+                        <a class="page-scroll" href="about">About</a>
                     </li>
 <!--                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -92,49 +91,104 @@
             </div>
         </div>
     </header>
+
+
     <div class="app">
         <div class="container">
-            <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">APPLY</a> </p>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="apply" class="btn btn-orange btn-md">APPLY</a> </p>
+                    </div>
+                    <div class="item">
+                        <p align="middle">LATEST UPDATE: New Blog Post by UCLA.   <a href="blog" class="btn btn-orange btn-md">Click Here</a> </p>
+                    </div>
+
+                    <div class="item">
+                        <!-- <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">APPLY</a> </p> -->
+                    </div>
+                    <div class="item">
+                        <!-- <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">APPLY</a> </p> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- About Section -->
-    <section id="about" class="bg-rishi container content-section text-center">
+    <section id="about" class="container content-section text-center">
         <div class="container">
-                    <div class="row">
-                        <div align="left" class="col-md-6 col-md-offset-0">
-                            <h3 style="color:#5d5d5d">Our Projects</h3>
-                            <br>
+<!--             <div class="row">
+                <div align="left" class="col-md-6">
+                    <h3 style="color:#5d5d5d">Our Projects</h3>
+                    <br>
+                </div>
+            </div> -->
+            <div class="row">
+                <div align="left" class="col-md-6">
+                    <h3 style="color:#5d5d5d">Our Projects</h3>
+                    <br>
+                    <p style="color:#5d5d5d">We focus on key developmental disparities that challenge our target village populations. After thoroughly understanding the severity of conditions relevant to each disparity, we research currently-existing solutions developed by social enterprises that have been successful in alleviating the burden of these disparities. Project RISHI catalyzes positive change by effectively bringing these affordable and sustainable solutions to our partnering villagers and evaluating each initiative's impact.</p>
+                    <p><a href="projects" class="btn btn-default btn-lg">Learn More</a></p>
+                </div>
+                <div class="col-md-6 grey-vert">
+                    <div align="left" class="col-sm-6">
+                        <div class="row">
+                        <p style="color:#5d5d5d">Click on disparity to learn more</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-0">
-                        <p  align="left" style="color:#5d5d5d">We Focus on key developmental disparities that challenge our target village populations. After thoroughly understanding the severity of conditions relevant to each disparity, we research currently-existing solutions developed by social enterprises that have been successful in alleviating the burden of these disparities. Project RISHI catalyzes positive change by effectively bringing these affordable and sustainable solutions to our partnering villagers and evaluating each initiative's impact.
-                        </p>
-                        <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Learn More</a></p>
+                        <div class="row"> 
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Health" data-content="We provide access to health care service through affordable emergency ambulance services, healthcare education, affordable health camps and fully funded rural health clinics."><img height="50" width="50" src="img/project_icons/health.png"/></a><font style="color:#5d5d5d"> Health</font>
                         </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Water" data-content="We decrease the incidence of waterborne diseases with safe drinking water kiosks, water delivery services, affordable filtration systems and practical sanitation solutions."><img height="50" width="50" src="img/project_icons/water.png"/></a><font style="color:#5d5d5d"> Water</font>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Education" data-content="We support education through tutoring programs, vocational training, career guidance, and technology advancements that will bridge the gap between urban and rural education."><img height="50" width="50" src="img/project_icons/education.png"/></a><font style="color:#5d5d5d"> Education</font>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Energy" data-content="We minimize the burden of expensive fuel costs by providing access to affordable hand-held solar power, distributed energy to rural communities, clean cookstoves, and bio-gasification systems."><img height="50" width="50" src="img/project_icons/energy.png"/></a><font style="color:#5d5d5d"> Energy</font>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <a tabindex="0" data-toggle="popover" data-trigger="focus" title="Income Generation" data-content="We empower farmers and laborers to increase income through microfinance, agricultural technologies, access to mobile technology and other entrepreneurial driving solutions."><img height="50" width="50" src="img/project_icons/income.png"/></a><font style="color:#5d5d5d"> Income Generation</font>
+                        </div>
+                        <br>
                     </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Download Section -->
     <section id="tickets" class="content-section text-center">
         <div class="download-section">
-                <div class="carousel-inner" id="projectrishi"></div>
+            <h4 style="color:white"><img height="50" width="50" src="img/social/instagram.png"/>  /projectrishi</h4>
+            <div class="carousel-inner" id="projectrishi"></div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="schedule" class="bg-rishi container content-section text-center">
+    <section id="schedule" class="container content-section text-center">
         <div class="container">
              <div class="col-lg-12 col-lg-offset-0.5">
                 <img class="img-responsive" align="middle" src="img/village.png">
             </div>
             <div class="row">
-                        <div class="col-sm-6">
-                            <h3 style="color:#5d5d5d">Our University Chapters</h3>
-                            <br>
-                            <p style="color:#5d5d5d">University of California, Los Angeles <br>
+                <div class="col-sm-6">
+                    <h3 style="color:#5d5d5d">Our University Chapters</h3>
+                    <br>
+                    <p style="color:#5d5d5d">University of California, Los Angeles <br>
                                 University of California, Berkeley <br>
                                 University of California, San Diego <br>
                                 University of California, Davis <br>
@@ -142,13 +196,13 @@
                                 University of California, Irvine <br>
                                 University of California, Riverside <br>
                                 Cal Poly Pomona <br>
-                            </p>
-                            <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-sm">Learn More</a></p>
-                        </div>
-                        <div class="col-sm-6">
-                            <h3 style="color:#5d5d5d">Our Community Partners in India</h3>
-                            <br>
-                            <p style="color:#5d5d5d">Anandwan, Maharashtra <br>
+                    </p>
+                    <p><a href="chapters" class="btn btn-default btn-sm">Learn More</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <h3 style="color:#5d5d5d">Our Community Partners in India</h3>
+                        <br>
+                    <p style="color:#5d5d5d">Anandwan, Maharashtra <br>
                                 Bharog Baneri, Himachal Pradesh <br>
                                 Charnia, Haryana <br>
                                 Elandaikudam, Tamil Nadu<br>
@@ -156,9 +210,9 @@
                                 Kharoli, Maharashtra <br>
                                 Pariej, Gujarat <br>
                                 Vadamanappakkam, Tamil Nadu <br>
-                            </p>
-                            <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-sm">Learn More</a></p>
-                        </div>
+                    </p>
+                    <p><a href="locations" class="btn btn-default btn-sm">Learn More</a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -166,7 +220,7 @@
     <!-- Donate Section -->
     <div class="sec">
         <div class="container">
-            <p align="middle">100% of your donations will go directly towards our projects. Support us today!   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">DONATE</a> </p>
+            <p align="middle">100% of your donations will go directly towards our projects. Support us today!   <a href="donate" class="btn btn-orange btn-md">DONATE</a> </p>
         </div>
     </div>
 
@@ -175,17 +229,17 @@
         <div class="container" >
              <div class="row text-center">
                         <div class="col-sm-3">
-                            <p><font color="#282A74"><strong>About</strong></font></p>
+                            <h5><font color="#2AA44E">About</font></h5>
                             <p align="middle" style="color:#5d5d5d">
-                                <a href="http://www.projectrishi.org/initiatives"><font color="#5d5d5d">Initiatives</font></a> <br>
-                                <a href="http://www.projectrishi.org/methodology"><font color="#5d5d5d">Methodology</font></a> <br>
-                                <a href="http://www.projectrishi.org/university_chapters"><font color="#5d5d5d">University Chapters</font></a> <br>
-                                <a href="http://www.projectrishi.org/locations"><font color="#5d5d5d">Partner Villages</font></a> <br>
-                                Funders <br>
+                                <a href="projects"><font color="#5d5d5d">Projects</font></a> <br>
+                                <a href="methodology"><font color="#5d5d5d">Methodology</font></a> <br>
+                                <a href="chapters"><font color="#5d5d5d">Chapters</font></a> <br>
+                                <a href="locations"><font color="#5d5d5d">Locations</font></a> <br>
+                                <a href="blog"><font color="#5d5d5d">Blog</font></a> <br>
                             </p>
                         </div>
                         <div class="col-sm-3">
-                            <p><font color="#282A74"><strong>Connect</strong></font></p>
+                            <h5><font color="#292D72">Connect</font></h5>
                             <p align="middle">
                                 <a href="http://www.instagram.com/projectrishi"><font color="#5d5d5d">Instagram</font></a> <br>
                                 <a href="http://www.facebook.com/projectrishi"><font color="#5d5d5d">Facebook</font></a> <br>
@@ -195,13 +249,15 @@
                             </p>
                         </div>
                         <div class="col-sm-3">
-                            <p><a href="http://www.projectrishi.org/donate"><font color="#282A74"><strong>Donate</strong></font></a></p>
-                           <p align="middle"><a href="mailto:contact@projectrishi.org"><font color="#5d5d5d">Contact</font></a> <br></p>
+                            <h5 align="middle"><a href="donate"><font color="#F06B2F"><strong>Donate</strong></font></a></h5>
+                           <h5 align="middle"><a href="mailto:contact@projectrishi.org"><font color="#F06B2F">Contact</font></a></h5><br>
                         </div>
                         <div class="col-sm-3 text-center">
                             <br>
                             <a href="http://www.projectrishi.org"><img align="middle" width="180px" height="100px" src="img/logo.jpg"></a>
-                            <p class="text-center"><font color="#5d5d5d">Copyright &copy; Project RISHI 2015</font></p>
+                            <p style="font-size:80%;"class="text-center"><font color="#5d5d5d">Copyright &copy; Project RISHI 2015</font>
+                            <br>
+                            <a href="privacypolicy"><font color="#5d5d5d">Privacy Policy</font></a></p>
                         </div>
             </div>
         </div>
@@ -238,6 +294,12 @@
         clientId: '2d276c7bc8e940e9a47c4432667c7972'
     });
     mainfeed.run();
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+    });
     </script>
 </body>
 
