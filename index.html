@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#">
+                <a class="navbar-brand page-scroll" href="/">
                     <font color="#F16822">Project</font><span class="light"><font color="#21A54A">RISHI</font></span>
                 </a>
             </div>
@@ -60,7 +60,7 @@
                         <a class="page-scroll" href="projects">Projects</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#schedule">Multimedia</a>
+                        <a class="page-scroll" href="blog">Blog</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="about">About</a>
@@ -91,9 +91,35 @@
             </div>
         </div>
     </header>
+
+
     <div class="app">
         <div class="container">
-            <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">APPLY</a> </p>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="apply" class="btn btn-orange btn-md">APPLY</a> </p>
+                    </div>
+                    <div class="item">
+                        <p align="middle">LATEST UPDATE: New Blog Post by UCLA.   <a href="blog" class="btn btn-orange btn-md">Click Here</a> </p>
+                    </div>
+
+                    <div class="item">
+                        <!-- <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">APPLY</a> </p> -->
+                    </div>
+                    <div class="item">
+                        <!-- <p align="middle">LATEST UPDATE: Apply now to one of our chapters.   <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-orange btn-md">APPLY</a> </p> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -111,7 +137,7 @@
                     <h3 style="color:#5d5d5d">Our Projects</h3>
                     <br>
                     <p style="color:#5d5d5d">We focus on key developmental disparities that challenge our target village populations. After thoroughly understanding the severity of conditions relevant to each disparity, we research currently-existing solutions developed by social enterprises that have been successful in alleviating the burden of these disparities. Project RISHI catalyzes positive change by effectively bringing these affordable and sustainable solutions to our partnering villagers and evaluating each initiative's impact.</p>
-                    <p><a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Learn More</a></p>
+                    <p><a href="projects" class="btn btn-default btn-lg">Learn More</a></p>
                 </div>
                 <div class="col-md-6 grey-vert">
                     <div align="left" class="col-sm-6">
@@ -159,10 +185,10 @@
                 <img class="img-responsive" align="middle" src="img/village.png">
             </div>
             <div class="row">
-                        <div class="col-sm-6">
-                            <h3 style="color:#5d5d5d">Our University Chapters</h3>
-                            <br>
-                            <p style="color:#5d5d5d">University of California, Los Angeles <br>
+                <div class="col-sm-6">
+                    <h3 style="color:#5d5d5d">Our University Chapters</h3>
+                    <br>
+                    <p style="color:#5d5d5d">University of California, Los Angeles <br>
                                 University of California, Berkeley <br>
                                 University of California, San Diego <br>
                                 University of California, Davis <br>
@@ -170,13 +196,13 @@
                                 University of California, Irvine <br>
                                 University of California, Riverside <br>
                                 Cal Poly Pomona <br>
-                            </p>
-                            <p><a href="http://www.projectrishi.org/chapters" class="btn btn-default btn-sm">Learn More</a></p>
-                        </div>
-                        <div class="col-sm-6">
-                            <h3 style="color:#5d5d5d">Our Community Partners in India</h3>
-                            <br>
-                            <p style="color:#5d5d5d">Anandwan, Maharashtra <br>
+                    </p>
+                    <p><a href="chapters" class="btn btn-default btn-sm">Learn More</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <h3 style="color:#5d5d5d">Our Community Partners in India</h3>
+                        <br>
+                    <p style="color:#5d5d5d">Anandwan, Maharashtra <br>
                                 Bharog Baneri, Himachal Pradesh <br>
                                 Charnia, Haryana <br>
                                 Elandaikudam, Tamil Nadu<br>
@@ -184,9 +210,9 @@
                                 Kharoli, Maharashtra <br>
                                 Pariej, Gujarat <br>
                                 Vadamanappakkam, Tamil Nadu <br>
-                            </p>
-                            <p><a href="http://www.projectrishi.org/locations" class="btn btn-default btn-sm">Learn More</a></p>
-                        </div>
+                    </p>
+                    <p><a href="locations" class="btn btn-default btn-sm">Learn More</a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -203,17 +229,17 @@
         <div class="container" >
              <div class="row text-center">
                         <div class="col-sm-3">
-                            <p><font color="#282A74"><strong>About</strong></font></p>
+                            <h5><font color="#2AA44E">About</font></h5>
                             <p align="middle" style="color:#5d5d5d">
-                                <a href="http://www.projectrishi.org/initiatives"><font color="#5d5d5d">Initiatives</font></a> <br>
-                                <a href="http://www.projectrishi.org/methodology"><font color="#5d5d5d">Methodology</font></a> <br>
-                                <a href="http://www.projectrishi.org/university_chapters"><font color="#5d5d5d">University Chapters</font></a> <br>
-                                <a href="http://www.projectrishi.org/locations"><font color="#5d5d5d">Partner Villages</font></a> <br>
-                                Funders <br>
+                                <a href="projects"><font color="#5d5d5d">Projects</font></a> <br>
+                                <a href="methodology"><font color="#5d5d5d">Methodology</font></a> <br>
+                                <a href="chapters"><font color="#5d5d5d">Chapters</font></a> <br>
+                                <a href="locations"><font color="#5d5d5d">Locations</font></a> <br>
+                                <a href="blog"><font color="#5d5d5d">Blog</font></a> <br>
                             </p>
                         </div>
                         <div class="col-sm-3">
-                            <p><font color="#282A74"><strong>Connect</strong></font></p>
+                            <h5><font color="#292D72">Connect</font></h5>
                             <p align="middle">
                                 <a href="http://www.instagram.com/projectrishi"><font color="#5d5d5d">Instagram</font></a> <br>
                                 <a href="http://www.facebook.com/projectrishi"><font color="#5d5d5d">Facebook</font></a> <br>
@@ -223,13 +249,15 @@
                             </p>
                         </div>
                         <div class="col-sm-3">
-                            <p><a href="http://www.projectrishi.org/donate"><font color="#282A74"><strong>Donate</strong></font></a></p>
-                           <p align="middle"><a href="mailto:contact@projectrishi.org"><font color="#5d5d5d">Contact</font></a> <br></p>
+                            <h5 align="middle"><a href="donate"><font color="#F06B2F"><strong>Donate</strong></font></a></h5>
+                           <h5 align="middle"><a href="mailto:contact@projectrishi.org"><font color="#F06B2F">Contact</font></a></h5><br>
                         </div>
                         <div class="col-sm-3 text-center">
                             <br>
                             <a href="http://www.projectrishi.org"><img align="middle" width="180px" height="100px" src="img/logo.jpg"></a>
-                            <p class="text-center"><font color="#5d5d5d">Copyright &copy; Project RISHI 2015</font></p>
+                            <p style="font-size:80%;"class="text-center"><font color="#5d5d5d">Copyright &copy; Project RISHI 2015</font>
+                            <br>
+                            <a href="privacypolicy"><font color="#5d5d5d">Privacy Policy</font></a></p>
                         </div>
             </div>
         </div>
