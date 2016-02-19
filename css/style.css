@@ -68,7 +68,8 @@ p {
 }
 
 .navbar {
-    background-color: #000 !important;
+    /*background-color: #000 !important;*/
+    background-color: #F5F4F5 !important; 
     height: auto;
 }
 
