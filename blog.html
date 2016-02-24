@@ -1,27 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Project RISHI (Rural India Social and Health Improvement)</title>
  
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<!--     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,700|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,37 +27,37 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-static-top" role="navigation">
+    <nav  class="navbar navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span style="background-color:black;" class="sr-only">Toggle navigation</span>
+                    <span style="background-color:black;" class="icon-bar"></span>
+                    <span style="background-color:black;" class="icon-bar"></span>
+                    <span style="background-color:black;" class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#">
+                <a  class="navbar-brand page-scroll" href="/">
                     <font color="#F16822">Project</font><span class="light"><font color="#21A54A">RISHI</font></span>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
+<!--                     <li class="hidden">
                         <a href="#page-top"></a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="chapters"><h5 style="color:#777777;">Chapters</h5></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="chapters">Chapters</a>
+                        <a class="page-scroll" href="projects"><h5 style="color:#777777;">Projects</h5></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="projects">Projects</a>
+                        <a class="page-scroll" href="blog"><h5 style="color:#21A54A;">Blog</h5></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="blog">Blog</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="about">About</a>
+                        <a class="page-scroll" href="about"><h5 style="color:#777777;">About</h5></a>
                     </li>
 <!--                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -83,8 +76,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-1">
-                        <p style="font-size:160%" align="left" class="brand-heading">"Some Quote"</p>
-                        <p style="font-size:110%" align="left" class="intro-text"><strong>-Some Dude<strong></p>
+                        <p style="font-size:160%" align="left" class="brand-heading">"Sometimes all it takes is a tiny shift of perspective to see something familiar in a totally new light."</p>
+                        <p style="font-size:110%" align="left" class="intro-text"><strong>-Dan Brown</strong></p>
                     </div>
                 </div> 
             </div>
@@ -104,99 +97,95 @@
                 </div>
             </div>
             <div class="row">
-                <div class="button-group">
-                    <button class="active btn btn-orange" data-filter="col-md-4">Show All</button>
-                    <button class="btn btn-orange" data-filter="nat">National</button>
-                    <button class="btn btn-orange" data-filter="ucla">UCLA</button>
-                    <button class="btn btn-orange" data-filter="cal">UC Berkeley</button>
-                    <button class="btn btn-orange" data-filter="ucsd">UCSD</button>
-                    <button class="btn btn-orange" data-filter="ucd">UC Davis</button>
-                    <button class="btn btn-orange" data-filter="uci">UCI</button>
-                    <button class="btn btn-orange" data-filter="nw">Northwestern</button>
-                    <button class="btn btn-orange" data-filter="ucr">UCR</button>
-                    <button class="btn btn-orange" data-filter="usc">USC</button>
-                    <button class="btn btn-orange" data-filter="cpp">Cal Poly</button>
-                    <button class="btn btn-orange" data-filter="pu">Purdue</button>
+                <div class="controls button-group">
+                    <button class="active filter" data-filter="all">Show All</button>
+                    <button class="filter" data-filter=".nat">National</button>
+                    <button class="filter" data-filter=".ucla">UCLA</button>
+                    <button class="filter" data-filter=".cal">UC Berkeley</button>
+                    <button class="filter" data-filter=".ucsd">UCSD</button>
+                    <button class="filter" data-filter=".ucd">UC Davis</button>
+                    <button class="filter" data-filter=".uci">UCI</button>
+                    <button class="filter" data-filter=".nw">Northwestern</button>
+                    <button class="filter" data-filter=".ucr">UCR</button>
+                    <button class="filter" data-filter=".usc">USC</button>
+                    <button class="filter" data-filter=".cpp">Cal Poly</button>
+                    <button class="filter" data-filter=".pu">Purdue</button>
                 </div>
             </div>
         </div>
         <br>
-        <div class="container">
-            <div id="parent">
-                <!-- Row Break -->
-                <div class="row">
-                    <div class="col-md-4 ucla">
-                      <a class="m-story" data-collapsed="true" href="https://medium.com/@UCLA_ProjectRISHI/bruins-target-environmental-sustainability-in-vadamanappakkam-75771df4328f">Bruins Target Environmental Sustainability in Vadamanappakkam</a>
-                    </div>
-                    <div class="col-md-4 ">
-                        
-                    </div>
-                    <div class="col-md-4 ">
-                       
-                    </div>
-                </div>
-                <!-- Row Break -->
-                <div class="row">
-                    <div class="col-md-4 nat">
-                        <a class="m-story" data-collapsed="true" href="https://medium.com/@projectrishi/national-10-reasons-why-project-rishi-stands-behind-modi-s-digital-india-89c929e3d727">10 Reasons Why Project RISHI Stands Behind Modi’s Digital India</a>
-                    </div>
-                    <div class="col-md-4 nat">
-                        <a class="m-story" data-collapsed="true" href="https://medium.com/@projectrishi/putting-together-project-rishi-s-project-methodology-4921bb86f08">Putting together Project RISHI’s Project Methodology</a>
-                    </div>
-                    <div class="col-md-4 cal">
-                       <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-testing-the-waters-8debd0d8ef88">Testing the Waters</a>
-                    </div>
-                </div>
-                <!-- Row Break -->
-                <div class="row">
-                    <div class="col-md-4 uci">
-                       <a class="m-story" data-collapsed="true" href="https://medium.com/@UCIProjectRISHI/understanding-elandaikudum-733615502e0">Understanding Elandaikudum</a>
-                    </div>
-                    <div class="col-md-4 ucla">
-                        <a class="m-story" data-collapsed="true" href="https://medium.com/@UCLA_ProjectRISHI/nepal-candlelight-vigil-44b660de9e33">Nepal Candlelight Vigil</a>
-                    </div>
-                    <div class="col-md-4 cal">
-                       <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-project-rishi-at-clinton-ded43ef026c1">Project RISHI at Clinton Global Initiative University</a>
-                    </div>
-                </div>
-                <!-- Row Break -->
-                <div class="row">
-                    <div class="col-md-4 ucla">
-                      <a class="m-story" data-collapsed="true" href="https://medium.com/@UCLA_ProjectRISHI/people-of-vadamanappakkam-982b4859a226">People of Vadamanappakkam</a>
-                    </div>
-                    <div class="col-md-4 cal">
-                        <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-no-treat-like-national-2b5ae2671e55">No Treat Like National Retreat</a>
-                    </div>
-                    <div class="col-md-4 cal">
-                       <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-water-sanitation-735048abba8e">Filtering Bharog’s Water</a>
-                    </div>
-                </div>
-                <!-- Row Break -->
-                <div class="row">
-                    <div class="col-md-4 uci">
-                      <a class="m-story" data-collapsed="true" href="https://medium.com/@UCIProjectRISHI/political-unrest-in-andhra-pradesh-4a5b23736035">Political Unrest in Andhra Pradesh</a>
-                    </div>
-                    <div class="col-md-4 cal">
-                        <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/uc-berkeley-treading-on-new-terrain-64ecb440deda">Treading on New Terrain</a>
-                    </div>
-                    <div class="col-md-4 uci">
-                       <a class="m-story" data-collapsed="true" href="https://medium.com/@UCIProjectRISHI/liter-of-light-407821881c47">Liter of Light</a>
-                    </div>
-                </div>
-                <!-- Row Break -->
-                <div class="row">
-                    <div class="col-md-4 cal">
-                      <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/planting-our-feet-on-the-ground-ed45db530f56">Planting Our Feet on the Ground</a>
-                    </div>
-                    <div class="col-md-4 cal">
-                        <a class="m-story" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-turning-over-a-new-leaf-9ae185c515f">Turning Over a New Leaf</a>
-                    </div>
-                    <div class="col-md-4 uci">
-                       
-                    </div>
-                </div>
-                <!-- Row Break -->
+        <div id="Container" class="container-filter">
+        <!-- Row Break -->
+            <div class="mix col-md-4 ucla">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@UCLA_ProjectRISHI/bruins-target-environmental-sustainability-in-vadamanappakkam-75771df4328f">Bruins Target Environmental Sustainability in Vadamanappakkam</a>
             </div>
+            <div class="mix col-md-4 nat">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@projectrishi/national-10-reasons-why-project-rishi-stands-behind-modi-s-digital-india-89c929e3d727">10 Reasons Why Project RISHI Stands Behind Modi’s Digital India</a>
+            </div>
+            <div class="mix col-md-4 cal">
+               <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-project-rishi-at-clinton-ded43ef026c1">Project RISHI at Clinton Global Initiative University</a>
+            </div>
+        <!-- Row Break -->
+            <div class="col-md-4 mix cal">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-nonprofit-nexus-78bbc2a91b34">Nonprofit Nexus</a>
+            </div>
+            <div class="col-md-4 mix nat">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@projectrishi/putting-together-project-rishi-s-project-methodology-4921bb86f08">Putting together Project RISHI’s Project Methodology</a>
+            </div>
+            <div class="col-md-4 mix cal">
+               <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-testing-the-waters-8debd0d8ef88">Testing the Waters</a>
+            </div>
+        <!-- Row Break -->
+            <div class="col-md-4 mix uci">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@UCIProjectRISHI/understanding-elandaikudum-733615502e0">Understanding Elandaikudum</a>
+            </div>
+            <div class="col-md-4 mix ucla">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@UCLA_ProjectRISHI/nepal-candlelight-vigil-44b660de9e33">Nepal Candlelight Vigil</a>
+            </div>
+            <div class="col-md-4 mix cal">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-turning-over-a-new-leaf-9ae185c515f">Turning Over a New Leaf</a>
+            </div>
+        <!-- Row Break -->
+            <div class="col-md-4 mix ucla">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@UCLA_ProjectRISHI/people-of-vadamanappakkam-982b4859a226">People of Vadamanappakkam</a>
+            </div>
+            <div class="mix col-md-4 cal">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-no-treat-like-national-2b5ae2671e55">No Treat Like National Retreat</a>
+            </div>
+            <div class=" mix col-md-4 cal">
+                <a class="m-story" data-width="100%"  data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/project-rishi-rural-india-social-health-improvement-uc-berkeley-water-sanitation-735048abba8e">Filtering Bharog’s Water</a>
+            </div>
+        <!-- Row Break -->
+            <div class="mix col-md-4 uci">
+                <a class="m-story" data-width="100%"  data-collapsed="true" href="https://medium.com/@UCIProjectRISHI/political-unrest-in-andhra-pradesh-4a5b23736035">Political Unrest in Andhra Pradesh</a>
+            </div>
+            <div class=" col-md-4 mix cal">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/uc-berkeley-treading-on-new-terrain-64ecb440deda">Treading on New Terrain</a>
+            </div>
+            <div class="col-md-4 mix uci">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@UCIProjectRISHI/liter-of-light-407821881c47">Liter of Light</a>
+            </div>
+        <!-- Row Break -->
+            <div class="col-md-4 mix cal">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@ucberkeleyrishi/planting-our-feet-on-the-ground-ed45db530f56">Planting Our Feet on the Ground</a>
+            </div>
+            <div class="col-md-4 mix nw">
+                <a class="m-story" data-width="100%" data-collapsed="true" data-width="100%" href="https://medium.com/@projectrishinu/project-rishi-rural-india-social-health-improvement-northwestern-s-summer-trip-to-charnia-dd38f2554ac2">Project RISHI (Rural India Social & Health Improvement) » Northwestern’s Summer Trip to Charnia</a>
+            </div>
+            <div class="col-md-4 mix nw">
+                <a class="m-story" data-width="100%" data-collapsed="true" href="https://medium.com/@projectrishinu/updates-on-northwestern-s-anemia-intervention-in-charnia-ecf3024fc01b">Updates on Northwestern’s Anemia Intervention in Charnia</a>
+            </div>
+        <!-- Row Break -->
+            <div class="col-md-4 mix nw">
+                <a class="m-story" data-width="100%" data-collapsed="true" data-width="100%" href="https://medium.com/@projectrishinu/an-eye-to-the-future-e253a2933978">An Eye to the Future</a>
+            </div>
+            <div class="col-md-4 mix nw">
+                <a class="m-story" data-width="100%" data-collapsed="true" data-width="100%" href="https://medium.com/@projectrishinu/project-rishi-rural-india-social-health-improvement-northwestern-northwestern-s-chapter-9e31d3ebc51c">Northwestern’s Chapter Retreat and Secret Santa</a>
+            </div>
+            <div class="col-md-4 mix nw">
+                <a class="m-story" data-width="100%" data-width="100%" data-collapsed="true" href="https://medium.com/@projectrishinu/a-health-clinic-as-a-starting-point-9dedb646695d">A Health Clinic as a Starting Point</a>
+            </div>
+        <!-- Row Break -->
         </div>
     </section>  
     <br>
@@ -219,7 +208,7 @@
                                 <a href="methodology"><font color="#5d5d5d">Methodology</font></a> <br>
                                 <a href="chapters"><font color="#5d5d5d">Chapters</font></a> <br>
                                 <a href="locations"><font color="#5d5d5d">Locations</font></a> <br>
-                                <a href="blog"><font color="#5d5d5d">Blog</font></a> <br>
+                                <a href="blog"><font color="#5d5d5d">Blog</font></a> <br><br>
                             </p>
                         </div>
                         <div class="col-sm-3">
@@ -229,10 +218,11 @@
                                 <a href="http://www.facebook.com/projectrishi"><font color="#5d5d5d">Facebook</font></a> <br>
                                 <a href="http://www.twitter.com/projectrishi"><font color="#5d5d5d">Twitter</font></a> <br>
                                 <a href="https://www.linkedin.com/company/projectrishi"><font color="#5d5d5d">LinkedIn</font></a> <br>
-                                Blog <br>
+                                <a href="apply"><font color="#5d5d5d">Apply</font></a> <br>
                             </p>
                         </div>
                         <div class="col-sm-3">
+                            <br>
                             <h5 align="middle"><a href="donate"><font color="#F06B2F"><strong>Donate</strong></font></a></h5>
                            <h5 align="middle"><a href="mailto:contact@projectrishi.org"><font color="#F06B2F">Contact</font></a></h5><br>
                         </div>
@@ -258,15 +248,17 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
     <!-- Medium -->
     <script async src="https://static.medium.com/embed.js"></script>
     <!-- Filter JQuery  -->
     <script src="js/filter.js"></script>
+    <!-- MixitUp Plugin -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script> $(function(){
+                    $('#Container').mixItUp();
+                    });
+    </script>
 
 </body>
 

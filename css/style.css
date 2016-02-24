@@ -68,7 +68,8 @@ p {
 }
 
 .navbar {
-    background-color: #000 !important;
+    /*background-color: #000 !important;*/
+    background-color: #F5F4F5 !important; 
     height: auto;
 }
 
@@ -676,5 +677,77 @@ body {
 }
 
 .carousel-indicators li { visibility: hidden; }
+
+
+
+
+/* Mix-It-Up Plug-In CSS Below*/
+#Container .mix{
+    display: none;
+}
+
+.filter {
+    border: 1px solid #F16822;
+    color: #fff;
+    background-color: #F16822;
+}
+
+
+.container-filter{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0;
+  /*background: #68b8c4;*/
+}
+
+.container-filter:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.container-filter .item,
+.container-filter .gap{
+  display: inline-block;
+  width: 49%;
+}
+
+.container-filter .item{
+  text-align: left;
+  /*background: #03899c;*/
+  margin-bottom: 2%;
+  padding: 2%;
+  vertical-align: top;
+  display: none;
+}
+
+/* Flex box progressive enhancements: */
+
+.container-filter{
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+  -webkit-align-content: flex-start;
+}
+
+@media all and (min-width: 420px){
+  .container-filter .item,
+  .container-filter .gap{
+    width: 32%;
+  }
+}
+
+/*Mix-it-Up Plugin CSS End*/
+
+
+
+
+
+
+
+
+
+
+
 
 
