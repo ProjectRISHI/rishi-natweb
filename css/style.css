@@ -10,7 +10,6 @@ body {
     font-family: "Lato",sans-serif;
     color: #fff;
     background-color: #fff;
-   /* margin-top: -5px;*/
 }
 
 /* Portfolio */
@@ -96,11 +95,15 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #01601e;
+    color: #F16822;
 }
 
 .light {
-    font-weight: 400;
+    font-weight: 300;
+}
+
+.fw-700 {
+    font-weight: 700;
 }
 
 .navbar {
@@ -136,7 +139,7 @@ a:focus {
 }
 
 .navbar a {
-    color: #fff;
+    color: #777777;
 }
 
 .navbar .nav li a {
@@ -147,28 +150,30 @@ a:focus {
 
 .navbar .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    color: #F16822;
     background-color: transparent;
 }
 
 .navbar .nav li a:focus,
 .navbar .nav li a:active {
     outline: 0;
-    background-color: transparent;
+    color: #21A54A;
 }
 
 .navbar .nav li.active {
     outline: 0;
+    /*color:#21A54A;*/
 }
 
 
 .navbar .nav li.active a {
-    background-color: rgba(255,255,255,.3);
-    background-color: #F16822;
+    /*background-color: rgba(255,255,255,.3);*/
+    background-color: transparent;
+    color:#21A54A;
 }
 
 .navbar .nav li.active a:hover {
-    color: #fff;
+    /*color: #F16822;*/
 }
 
 @media(min-width:768px) {
@@ -214,26 +219,29 @@ a:focus {
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+    font-weight: 300;
 }
 
 @media(min-width:768px) {
     .intro {
         height: 90%;
-/*        height: 100%;*/
         padding: 0;
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 20px;
+        font-size: 21px;
+        font-weight: 700;
     }
 
     .intro .intro-body .intro-text {
-        font-size: 26px;
+        font-size: 18px;
+        font-weight: 300;
     }
 }
 
@@ -258,11 +266,13 @@ a:focus {
 }
 
 .intro_sub .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .intro_sub .intro-body .intro-text {
     font-size: 18px;
+    font-weight: 300;
 }
 
 @media(min-width:768px) {
@@ -272,11 +282,13 @@ a:focus {
     }
 
     .intro_sub .intro-body .brand-heading {
-        font-size: 20px;
+        font-size: 21px;
+        font-weight: 700;
     }
 
     .intro_sub .intro-body .intro-text {
-        font-size: 26px;
+        font-size: 18px;
+        font-weight: 300;
     }
 }
 
@@ -454,7 +466,7 @@ a:focus {
 
 .app {
     width: 100%;
-    padding: 25px 0;
+    padding: 10px ;
     color: #fff;
     background-color: #21A54A;
     -webkit-background-size: cover;
@@ -514,7 +526,7 @@ a:focus {
         margin-top: 0px;
     }
     .app {
-        height: 80px;
+        height: 50px;
         margin-top: 0px;
     }
     .apply {
