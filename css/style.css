@@ -441,9 +441,10 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 20px 0;
+    height: 50%;
+    /*padding: 20px 0;*/
     color: #fff;
-    background: url() no-repeat center center scroll;
+    background: url(../img/banner/projectbanner.png) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
