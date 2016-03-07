@@ -43,7 +43,6 @@ h4,
 h5,
 h6 {
     margin: 0 0 5px;
-    /*text-transform: uppercase;*/
     font-family: "Roboto Slab",sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
@@ -209,9 +208,6 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
-
-
-
 
 .intro .intro-body {
     display: table-cell;
@@ -455,7 +451,7 @@ a:focus {
 
 .sec {
     width: 100%;
-    padding: 25px 0;
+    padding: 10px 0;
     color: #fff;
     background-color: #21A54A;
     -webkit-background-size: cover;
@@ -519,11 +515,10 @@ a:focus {
 
     .grey-2 {
         height: auto;
-        margin-top: 0px;
     }
 
     .sec {
-        height: 80px;
+        height: 50px;
         margin-top: 0px;
     }
     .app {
@@ -589,7 +584,7 @@ a:focus {
 
 .grey-vert {
     height:100%;
-    /*width: 50%;*/
+    /*width: 40%;*/
     background-color: #F5F4F5; 
     margin-bottom: 0px;
 }
@@ -940,14 +935,4 @@ body {
             right: auto;
         }
 }
-
-
-
-
-
-
-
-
-
-
 
