@@ -85,7 +85,7 @@ p {
 
 
 a {
-    color: #fff;
+    color: #F06B2F;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -94,8 +94,46 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #F16822;
+    color: #F79E52;
 }
+
+.orange-link a {
+    color: #F06B2F;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+
+.orange-link a:hover {
+    text-decoration: none;
+    color: #F79E52;
+}
+
+.green-link a {
+    color:#21A54A;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.green-link a:hover {
+    text-decoration: none;
+    color:#97CB57;
+}
+
+.blue-link a {
+    color:#282A74;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.blue-link a:hover {
+    text-decoration: none;
+    color:#7291CA;
+}
+
 
 .light {
     font-weight: 300;
@@ -149,7 +187,7 @@ a:focus {
 
 .navbar .nav li a:hover {
     outline: 0;
-    color: #F16822;
+    color: #F79E52;
     background-color: transparent;
 }
 
@@ -453,7 +491,7 @@ a:focus {
     width: 100%;
     padding: 10px 0;
     color: #fff;
-    background-color: #21A54A;
+    background-color: #282A74;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -465,7 +503,7 @@ a:focus {
     width: 100%;
     padding: 10px ;
     color: #fff;
-    background-color: #21A54A;
+    background-color: #F16822;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -478,7 +516,7 @@ a:focus {
     width: 100%;
     padding: 10px 0;
     color: #fff;
-    background-color: #21A54A;
+    background-color: #F16822;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
