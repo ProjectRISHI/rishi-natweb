@@ -154,7 +154,8 @@ a:focus {
 .navbar .navbar-brand {
     font-weight: 700;
     font-family: "Lato",sans-serif;
-    padding:auto;
+    padding-top:1px;
+    padding-bottom: 60px;
 }
 
 .navbar .navbar-brand:focus {
@@ -163,6 +164,10 @@ a:focus {
 
 .icon-bar {
     background-color:white;
+}
+
+.navbar-toggle {
+    padding-top: 15px;
 }
 
 .navbar .navbar-brand .navbar-toggle {
@@ -184,6 +189,7 @@ a:focus {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
+    padding-top:22px;
 }
 
 .navbar .nav li a:hover {
@@ -476,7 +482,7 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
+    padding-top: 75px;
     color: #fff;
     background: url(../img/banner/projectbanner.png) no-repeat center center scroll;
     background-color: #000;
@@ -489,7 +495,8 @@ a:focus {
 
 .sec {
     width: 100%;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom:1px;
     color: #fff;
     background-color: #282A74;
     -webkit-background-size: cover;
@@ -514,7 +521,8 @@ a:focus {
 
 .apply {
     width: 100%;
-    padding: 10px 0;
+    padding-top: 11px;
+    padding-bottom: 1px;
     color: #fff;
     background-color: #F16822;
     -webkit-background-size: cover;
@@ -599,8 +607,11 @@ a.btn.btn-default.btn-navbar {
     background-color:#F16822;
     border: 1px solid #F16822;
     margin:6px;
-    padding:9px;
     color:white;
+    padding-bottom:6px;
+    padding-top:9px;
+    padding-left:9px;
+    padding-right:9px;
 }
 a.btn.btn-default.btn-navbar:hover {
     background-color:#F79E52;
