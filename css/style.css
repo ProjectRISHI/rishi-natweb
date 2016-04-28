@@ -36,6 +36,15 @@ html {
     height: 100%;
 }
 
+#logolg {
+    background-color: white;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 4px 30px -6px #999;
+    height:140px;
+    width:auto;
+}
+
 h1,
 h2,
 h3,
@@ -53,7 +62,7 @@ p {
     margin: 0 0 25px;
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 300;
+    font-weight: 500;
     font-family: "Lato",sans-serif;
 }
 
