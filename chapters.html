@@ -1463,7 +1463,7 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="portfolio-item">
-                                                <img align="middle" class="img-portfolio img-circle" height="150" width="150" src="img/chapters/ucr/ucr_riya.png">
+                                                <img align="middle" class="img-portfolio img-circle" height="150" width="150" src="img/chapters/ucr/ucr_riyaj.png">
                                             </div>
                                             <h5 style="color:#5d5d5d">Riya Jain</h5>
                                             <p style="color:#5d5d5d">Director of Initiatives
@@ -1681,7 +1681,7 @@
                 </div>
                 <div class="col-sm-3 text-center">
                     <br>
-                    <a href="http://www.projectrishi.org"><img align="middle" width="180px" height="100px" src="img/logo.jpg"></a>
+                    <a href="http://www.projectrishi.org"><img id="logofoot" align="middle" src="img/logos/logo3.png"></a>
                     <p style="font-size:80%;"class="text-center"><font color="#5d5d5d">Copyright &copy; Project RISHI 2016</font>
                     <br>
                     <a href="privacypolicy"><font color="#5d5d5d">Privacy Policy</font></a></p>
@@ -1701,7 +1701,18 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <!-- Medium Java Script -->
-    <script async src="https://static.medium.com/embed.js"></script>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "https://static.medium.com/embed.js";
+        document.body.appendChild(element);
+        }
+        if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
+    </script>
 
 </body>
 
