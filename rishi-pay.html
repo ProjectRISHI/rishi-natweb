@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>RISHI Pay | Project RISHI (Rural India Social and Health Improvement)</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/faviconit/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="img/faviconit/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="img/faviconit/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="img/faviconit/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/faviconit/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="img/faviconit/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/faviconit/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/faviconit/favicon-16.png">
+    <link rel="apple-touch-icon" href="img/faviconit/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/faviconit/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/faviconit/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/faviconit/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/faviconit/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/faviconit/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/faviconit/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/faviconit/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/faviconit/favicon-180.png">  
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">      
+    <!-- Intro Header -->
+    <header style="height:100%" class="intro_sub donate">
+        <div class="intro-body">
+            <div class="container">
+                <div class="col-md-12">
+                    <h3 style="color:white">RISHI Pay: Make Simple Payments to RISHI</h3><br>
+                    <!-- PayPal Logo --><img src="https://www.paypalobjects.com/webstatic/mktg/logo/bdg_payments_by_pp_2line.png" height="35" width="120"alt="PayPal Acceptance Mark"></a></td></tr></table><!-- PayPal Logo -->
+                    <br><br>
+                </div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" role="form">
+                    <input type="hidden" name="cmd" value="_donations">
+                    <input type="hidden" name="business" value="donate@projectrishi.org">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <!-- <label for="firstname">First Name</label> -->
+                                <input type="text" name="first_name" class="form-control" id="firstname" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <!-- <label for="lastname">Last Name</label> -->
+                                <input type="text" name="last_name" class="form-control" id="lastname" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <!-- <label for="email"></label> -->
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <!-- <label for="pwd">Password:</label> -->
+                                <input type="text" name="amount" class="form-control" id="pwd" placeholder="Amount ($)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <select class="form-control" name="item_name">
+                                    <option value="Membership Fee">General Payment</option>
+                                    <option value="National Team">National Team</option>
+                                    <option value="UCLA">UCLA</option>
+                                    <option value="UC Berkeley">UC Berkeley</option>
+                                    <option value="UC San Diego">UC San Diego</option>
+                                    <option value="UC Davis">UC Davis</option>
+                                    <option value="Northwestern">Northwestern</option>
+                                    <option value="UC Irvine">UC Irvine</option>
+                                    <option value="USC"> USC</option>
+                                    <option value="Purdue University"> Purdue University</option>
+                                    <option value="Arizona State"> Arizona State University</option>
+                                    <option value="Cal Poly Pomona"> Cal Poly Pomona</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <select class="form-control" name="item_number">
+                                    <option value="Misc. Payment">Misc. Payment</option>
+                                    <option value="Membership Fee (2016-2017)">Membership Fee (2016-2017)</option>
+                                    <option value="Chapter Fee (2016-2017)">Chapter Fee (2016-2017)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-orange btn-lg">Submit Payment</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>

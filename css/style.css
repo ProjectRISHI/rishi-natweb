@@ -350,6 +350,7 @@ a:focus {
 }
 
 .donate {
+    width: 100%;
     background: url(../img/banner/donate.png) no-repeat bottom center scroll;
 }
 
