@@ -1,0 +1,239 @@
+{% extends "skeleton.html" %}
+
+    {% block navbar %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <li class="active">
+                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                    </li>            
+                    <li>
+                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}"><h5>About</h5></a>
+                    </li>
+                    <li style="padding-top:5px;">
+                        <a class="btn btn-default btn-sm btn-navbar" href="{{ url_for('donate') }}"><h5>DONATE</h5></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% endblock %}
+
+        
+    {% block header %}
+    <header class="intro_sub proj">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p align="left" class="brand-heading">We are dedicated to helping our communities thrive.</p>
+                        <p align="left" class="intro-text">Our projects address disparities in the realms of health, water & sanitation, renewable energy, education, and income generation.</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <!-- Small Green Border -->
+    <div class="apply"></div>
+    {% endblock %}
+
+    {% block section %}
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div align="middle" class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Projects</h3>
+                <br>
+                <p style="color:#5d5d5d">We focus on key developmental disparities that challenge our target village populations. Our aim is to identify and appropriately address the disparities our communities face while empowering them with the knowledge, tools, and resources to ensure lasting change.</p>
+                <br>
+                <h3 style="color:#5d5d5d">Our Methodology</h3>
+                <br>
+                <p style="color:#5d5d5d">We use a five-step process to ensure that the needs of our partner communities are effectively met. This framework maintains the quality of service and support we provide to our target population.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p><img class="img-responsive" src="http://s3.projectrishi.org/img/method-icons/methodology_overview.png"/></p>
+                    <p><a href="{{ url_for('methodology') }}" class="btn btn-default btn-lg">Learn More about Our Methodology</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- HEALTH -->
+    <div class="grey-2">
+        <div class="container">
+            <div class="col-md-8">
+                <h4 style="color:#838383"><img height="50" width="50" src="http://s3.projectrishi.org/img/project_icons/health.png"/>  HEALTH</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div align="left" class="col-md-6">
+                <br>
+                <p style="color:#838383">We aim to provide access to health care in areas that need it the most through affordable emergency ambulance services, healthcare education, health camps and fully funded rural health clinics.
+                <br><br>
+                <font style="color:#EF6830">Learn more about <a href="{{ url_for('health') }}">HEALTH</a></font>               
+                </p>                
+            </div>
+            <div class="col-md-6 grey-vert">
+                <div align="left" class="container">
+                    <div class="col-md-6 row">
+                        <br>
+                        <h4 style="color:#4A4A4A">Featured Project</h4>
+                        <br>
+                        <p align="left"><strong><font style="color:#282A74">Location: </font><font style="color:#4A4A4A">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#282A74">Chapter Lead: </font><font style="color:#4A4A4A">UCLA</font><br><font style="color:#282A74">Methodology Stage: </font><font style="color:#4A4A4A">#5 Evaluate</font></strong>
+                        <br><br>
+                        <font style="color:#5d5d5d">India only has 6.5 physicians for every 100,000 people with a ratio much lower in rural areas. In Vadamanappakkam, the closest hospital is too far to provide readily accessible healthcare. In its founding, Project RISHI donors opened a free clinic with the aim of addressing the high incidence of preventable diseases. Project RISHI has utilized Hesperian’s Where There Are No Doctors and partnered with local self help groups to implement various health education programs focused on increasing knowledge of and prevention of health problems such as diarrhea, asthma and blindness. We continue to monitor the impact of these programs by measuring the decreasing instances of patients affected by these diseases.</font></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- WATER -->
+    <div class="grey-2">
+        <div class="container">
+            <div class="col-md-8">
+                <h4 style="color:#838383"><img height="50" width="50" src="http://s3.projectrishi.org/img/project_icons/water.png"/>  WATER</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div align="left" class="col-md-6">
+                <br>
+                <p style="color:#838383">We aim to decrease the incidence of water-borne diseases through affordable safe drinking water kiosks, water delivery services, filtration systems and practical sanitation solutions.
+                <br><br>
+                <font style="color:#EF6830">Learn more about <a href="{{ url_for('water') }}">WATER</a></font>               
+                </p>
+            </div>
+            <div class="col-md-6 grey-vert">
+                <div align="left" class="container">
+                    <div class="col-md-6 row">
+                        <br>
+                        <h4 style="color:#4A4A4A">Featured Project</h4>
+                        <br>
+                        <p align="left"><strong><font style="color:#282A74">Location: </font><font style="color:#4A4A4A">Bharog Baneri, Himachal Pradesh</font><br><font style="color:#282A74">Chapter Lead: </font><font style="color:#4A4A4A">UC Berkeley</font><br><font style="color:#282A74">Methodology Stage: </font><font style="color:#4A4A4A">#4 Implement</font></strong>
+                        <br><br>
+                        <font style="color:#5d5d5d">Despite many existing natural sources of water surrounding rural villages in mountainous regions, access to clean water continues to exist as a problematic disparity. For example, in Bharog Baneri, water testing showed levels of E. Coli that were not compliant with the standards set by the world health organization. Project RISHI aims to address the village’s poor quality of consumable water and the secondary health effects stemming from contaminated water. In partnership with SATHI, we have distributed biosand water filters, effective tools to provide affordable access to safe drinking water, to one ward of Bharog Baneri. Project RISHI will monitor the benefit of selling village consumers on the benefit of these biosand water filters and expand this program to additional wards accordingly.</font></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ENERGY -->
+    <div class="grey-2">
+        <div class="container">
+            <div class="col-md-8">
+                    <h4 style="color:#838383"><img height="50" width="50" src="http://s3.projectrishi.org/img/project_icons/energy.png"/>  ENERGY</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div align="left" class="col-md-6">
+                <br>
+                <p style="color:#838383">We aim to help rural villagers secure a stronger environmental, health and economical outlook through hand-held solar power, fuel-efficient cookstoves and bio-gasification systems.
+                <br><br>
+                <font style="color:#EF6830">Learn more about <a href="{{ url_for('energy') }}">ENERGY</a></font>               
+                </p>
+            </div>
+            <div class="col-md-6 grey-vert">
+                <div align="left" class="container">
+                    <div class="col-md-6 row">
+                        <br>
+                        <h4 style="color:#4A4A4A">Featured Project</h4>
+                        <br>
+                        <p align="left"><strong><font style="color:#282A74">Location: </font><font style="color:#4A4A4A">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#282A74">Chapter Lead: </font><font style="color:#4A4A4A">UCLA</font><br><font style="color:#282A74">Methodology Stage: </font><font style="color:#4A4A4A">#5 Evaluate</font></strong>
+                        <br><br>
+                        <font style="color:#5d5d5d">Smoke from open fire cooking is 4th largest factor impacting health in the world. 50% of the families, especially the women, in Vadamanappakkam are exposed to these fumes with resulting respiratory afflictions, eye infections, asthma, and lung cancer. These problems associated with solid biomass fuels could be reduced with efficient burning. Project RISHI has partnered with Prakti Design and Greenway infra to provide fuel-efficient cookstoves that will limit smoke emissions, decrease negative health impact and improve user productivity and savings due to decreased fuel consumption.</font></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- EDUCATION -->
+    <div class="grey-2">
+        <div class="container">
+            <div class="col-md-8">
+                <h4 style="color:#838383"><img height="50" width="50" src="http://s3.projectrishi.org/img/project_icons/education.png"/>  EDUCATION</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div align="left" class="col-md-6">
+                <br>
+                <p style="color:#838383">We aim to balance educational inequalities through targeted tutoring programs, resources for vocational training, and technological advancements within current school systems.
+                <br><br>
+                <font style="color:#EF6830">Learn more about <a href="{{ url_for('education') }}">EDUCATION</a></font>              
+                </p>
+            </div>
+            <div class="col-md-6 grey-vert">
+                <div align="left" class="container">
+                    <div class="col-md-6 row">
+                        <br>
+                        <h4 style="color:#4A4A4A">Featured Project</h4>
+                        <br>
+                        <p align="left"><strong><font style="color:#282A74">Location: </font><font style="color:#4A4A4A">Tanda, Sonepat</font><br><font style="color:#282A74">Chapter Lead: </font><font style="color:#4A4A4A">Cal Poly Pomona</font><br><font style="color:#282A74">Methodology Stage: </font><font style="color:#4A4A4A">#1 Understand</font></strong>
+                        <br><br>
+                        <font style="color:#5d5d5d">In rural India, less than half of 5th grade students can read at a 2nd grade level or higher. 80% of adults in Jhunpur, Tanda and Jagdishpur have never been schooled beyond the 8th grade, contributing to the high rates of unemployment and economic insecurity. Dedicating time to solidify basic skills in struggling students could lay a better foundation for socio-economic progress. Cal Poly Pomona has partnered with International Group of Institutions, a nearby pharmacy and engineering college, to tutor children in need and inspire learning with hands-on projects and workshops.</font></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- INCOME GEN -->
+    <div class="grey-2">
+        <div class="container">
+            <div class="col-md-8">
+                <h4 style="color:#838383"><img height="50" width="50" src="http://s3.projectrishi.org/img/project_icons/income.png"/>  INCOME GENERATION</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div align="left" class="col-md-6">
+                <br>
+                <p style="color:#838383">We aim to increase opportunities for farmers and laborers to generate more income through microfinance, drip-irrigation technology, access to mobile-technology and other entrepreneurial-driving solutions.
+                <br><br>
+                <font style="color:#EF6830">Learn more about <a href="{{ url_for('income') }}">INCOME GENERATION</a></font>               
+                </p>
+            </div>
+            <div class="col-md-6 grey-vert">
+                <div align="left" class="container">
+                    <div class="col-md-6 row">
+                        <br>
+                        <h4 style="color:#4A4A4A">Featured Project</h4>
+                        <br>
+                        <p align="left"><strong><font style="color:#282A74">Location: </font><font style="color:#4A4A4A">Bharog Baneri, Himachal Pradesh</font><br><font style="color:#282A74">Chapter Lead: </font><font style="color:#4A4A4A">UC Berkeley</font><br><font style="color:#282A74">Methodology Stage: </font><font style="color:#4A4A4A">#2 Research</font></strong>
+                        <br><br>
+                        <font style="color:#5d5d5d">Mahila Mandals are support groups in rural villages that promote women’s empowerment through financial independence. In Bharog Baneri, this group aims to strengthen their economic independence by creating baskets with materials found near their homes. The work is so ornate that each piece can take days to create - resulting in beautiful products that can be very appealing to buyers. However, their market is limited due to the isolated landscape of Bharog Baneri. Project RISHI is working with college students in Delhi who have had past experience and success in expanding markets of rural artisan products to handicraft boutiques in Delhi. We hope to identify a successful implementation scheme that will cater to the needs of these village women and empower them in gaining better success with their business.</font></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
