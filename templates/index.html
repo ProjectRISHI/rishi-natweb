@@ -56,17 +56,13 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active blue-link">
-                        <p align="middle">LATEST UPDATE: Apply to be part of RISHI Chapter!&nbsp;&nbsp;&nbsp;<a href="{{ url_for('apply') }}"><strong>Click Here >></strong></a> </p>
+                        <p align="middle">Welcome to ProjectRISHI.org!</p>
                     </div>
+                    {% for m in marquee %}
                     <div class="item blue-link">
-                        <p align="middle">LATEST UPDATE: Stay updated on our Projects with RISHI Perspective&nbsp;&nbsp;&nbsp;<a href="{{ url_for('blog') }}"><strong>Click Here >></strong></a> </p>
+                        <p align="middle">LATEST UPDATE: {{ m.content }}&nbsp;&nbsp;&nbsp;<a href="{{ m.link }}"><strong>Click Here ></strong></a> </p>
                     </div>
-                    <div class="item blue-link">
-                        <p align="middle">LATEST UPDATE: Join the Discussion on #RISHIForums&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/groups/RISHIforums/"><strong>Click Here >></strong></a> </p>
-                    </div>
-<!--                     <div class="item blue-link">
-                        <p align="middle">LATEST UPDATE: &nbsp;&nbsp;&nbsp;<a href="blog"><strong>Click Here >></strong></a></p>
-                    </div> -->
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -80,24 +76,24 @@
                     <h3 style="color:#5d5d5d">What We Do.</h3>
                     <br>
                     <p style="color:#5d5d5d">We aim to address key developmental disparities that challenge our target village populations. After thoroughly understanding the severity of conditions relevant to each disparity, we research proven solutions developed by social enterprises that have already been successful in alleviating the burden of these disparities. Project RISHI catalyzes positive change by effectively bringing these affordable and sustainable solutions to our partnering villagers and then thoroughly evaluating the impact of each initiative.</p>
-                    <p align="middle"><a href="projects" class="btn btn-default btn-lg">Learn More</a></p>
+                    <p align="middle"><a href="{{ url_for('projects') }}" class="btn btn-default btn-lg">Learn More</a></p>
                 </div>
                 <div class="col-md-4">
-                    <img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/health.png"/><br>
+                    <a href="{{ url_for('health') }}"><img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/health.png"/></a><br>
                 </div>
                 <div class="col-md-4">
-                    <img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/income_generation.png"/><br>
+                    <a href="{{ url_for('income') }}"><img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/income_generation.png"/></a><br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/energy.png"/><br>
+                    <a href="{{ url_for('energy') }}"><img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/energy.png"/></a><br>
                 </div>
                 <div class="col-md-4">
-                    <img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/education.png"/><br>
+                    <a href="{{ url_for('education') }}"><img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/education.png"/></a><br>
                 </div>
                 <div class="col-md-4">
-                    <img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/water_sanitation.png"/><br>
+                    <a href="{{ url_for('water') }}"><img align="middle" class="img-portfolio img-responsive" src="http://s3.projectrishi.org/img/homepage/water_sanitation.png"/></a><br>
                 </div>
             </div>
         </div>

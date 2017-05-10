@@ -1,19 +1,22 @@
 from flask import Flask,request,render_template
-import urllib2,json
 from lib import gscrape
 
 app = Flask(__name__)
-url = "https://spreadsheets.google.com/feeds/list/1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0/od6/public/basic?alt=json"
-response = urllib2.urlopen(url)
-html = response.read()
-html = json.loads(html)
-feed=html["feed"]
-entry= feed["entry"]
-obj=gscrape.getFeedList(entry)
+
+chap_apply = "https://spreadsheets.google.com/feeds/list/1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0/od6/public/basic?alt=json"
+marq = "https://spreadsheets.google.com/feeds/list/15odV2nwZvLJLvBi5g51Ma8UsgN2WSCKiDt0JeyhEthw/od6/public/basic?alt=json"
+
+chap_apply=gscrape.getEntry(chap_apply)
+chap_apply=gscrape.getFeedList(chap_apply)
+marq=gscrape.getEntry(marq)
+marq=gscrape.getFeedList(marq)
 
 @app.route('/')
 def index():
-	return render_template("index.html", title="Home")
+	marquee=list()
+	for dic in marq:
+		marquee.append({"content":gscrape.getMarquee(dic),"link":gscrape.getMarqueeLink(dic)})
+	return render_template("index.html", title="Home",marquee=marquee)
 
 @app.route('/about')
 def about():
@@ -22,7 +25,7 @@ def about():
 @app.route('/apply')
 def apply():
 	appl=list()
-	for dic in obj:
+	for dic in chap_apply:
 		appl.append({"chapter":gscrape.getChapter(dic),"due_date":gscrape.getDueDate(dic),"link":gscrape.getAppLink(dic),"contact":gscrape.getContactInfo(dic),"seal":gscrape.getSeal(dic)})
 	return render_template("apply.html",title="Apply",appl=appl)
 
