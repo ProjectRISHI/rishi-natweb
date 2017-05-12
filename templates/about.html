@@ -46,271 +46,97 @@
 
     {% block section %}
     <section class="container content-section text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 style="color:#5d5d5d">Our Mission</h3>
-                    <br>
-                    <p style="color:#5d5d5d"><strong>Our mission is to promote the sustainable development of rural Indian communities. <br>In partnership with local community members and social enterprises, we identify issues central to our target communities and provide the resource to implement solutions through extensive field research and on-campus initiatives.</strong></p>
-                    <br>
-                    <h3 style="color:#5d5d5d">About Us</h3>
-                    <br>
-                    <p style="color:#5d5d5d">We are a diverse group of passtionate and energetic individuals moving forward the dialogue on equity and resilience through our projects. We operate on a university model where undergraduate chapters partner with villages in need and a single National team serves to empower these chapters with the resources and guidance. Finally, our donors who believe in our mission allow us to make our projects a reality.</p>
-                    <br>
-                    <br>
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Mission</h3>
+                <br>
+                <p style="color:#5d5d5d"><strong>Our mission is to promote the sustainable development of rural Indian communities. <br>In partnership with local community members and social enterprises, we identify issues central to our target communities and provide the resource to implement solutions through extensive field research and on-campus initiatives.</strong></p>
+                <br>
+                <h3 style="color:#5d5d5d">About Us</h3>
+                <br>
+                <p style="color:#5d5d5d">We are a diverse group of passtionate and energetic individuals moving forward the dialogue on equity and resilience through our projects. We operate on a university model where undergraduate chapters partner with villages in need and a single National team serves to empower these chapters with the resources and guidance. Finally, our donors who believe in our mission allow us to make our projects a reality.</p>
+                <br>
+                <br>
             </div>
-            <!-- OUR TEAM -->
-            <div class="row">
-                <div align="middle" class="col-md-12">
-                    <h3 style="color:#5d5d5d">Our Team</h3>
-                    <br>
-                    <p style="color:#5d5d5d">Our National Team consists of entrepreneurs, educators, business leaders, developers, students, and more who believe deeply in the power of innovation and initiative to improve social and health conditions in rural India.</p>
-                    <br>
-                </div>
+        </div>
+        <!-- OUR TEAM -->
+        <div class="row">
+            <div align="middle" class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Team</h3>
+                <br>
+                <p style="color:#5d5d5d">Our National Team consists of entrepreneurs, educators, business leaders, developers, students, and more who believe deeply in the power of innovation and initiative to improve social and health conditions in rural India.</p>
+                <br>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ravi.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Dr. Ravi Menghani</h5>
-                    <p style="color:#5d5d5d">Founder, Executive Director
-                    <br>
-                    <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a></p>
-                </div>                        
-                
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/udaygul.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Uday Gulati</h5>
-                    <p style="color:#5d5d5d">President, National Team
-                    <br>
-                    <a href="mailto:ugulati@projectrishi.org"><font color="#21A54A">ugulati@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ganesh.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Ganesh Raman</h5>
-                    <p style="color:#5d5d5d">Assistant Director
-                    <br>
-                    <a href="mailto:graman@projectrishi.org"><font color="#21A54A">graman@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/anurag.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Anurag Singhal</h5>
-                    <p style="color:#5d5d5d">Director of Ops & Strategy
-                    <br>
-                    <a href="mailto:asinghal@projectrishi.org"><font color="#21A54A">asinghal@projectrishi.org</font></a></p>
-                </div>  
+        </div>
 
+        {% for n in national %}
+        <div class="col-md-3">
+            <div class="portfolio-item">
+                <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="{{ n.photo }}">
             </div>
-            <div class="row">                       
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/adi.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Adi Gulati</h5>
-                    <p style="color:#5d5d5d">Director of Marketing - Strategy
-                    <br>
-                    <a href="mailto:agulati@projectrishi.org"><font color="#21A54A">agulati@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/mo.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Mo Siddiqui</h5>
-                    <p style="color:#5d5d5d">Director of Finance
-                    <br>
-                    <a href="mailto:msiddiqui@projectrishi.org"><font color="#21A54A">msiddiqui@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/rajat.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Rajat Suri</h5>
-                    <p style="color:#5d5d5d">Director of Initiatives
-                    <br>
-                    <a href="mailto:rsuri@projectrishi.org"><font color="#21A54A">rsuri@projectrishi.org</font></a></p>
-                </div>  
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/mughda.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Mugdha Golwalkar</h5>
-                    <p style="color:#5d5d5d">Director of Initiatives
-                    <br>
-                    <a href="mailto:mgolwalkar@projectrishi.org"><font color="#21A54A">mgolwalkar@projectrishi.org</font></a></p>
-                </div>
-            </div>
-            <div class="row">                     
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/akhil.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Akhil Kumar</h5>
-                    <p style="color:#5d5d5d">Director of Initiatives
-                    <br>
-                    <a href="mailto:akumar@projectrishi.org"><font color="#21A54A">akumar@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ucla_suruchi.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Suruchi Salgar</h5>
-                    <p style="color:#5d5d5d">Initiatives Associate
-                    <br>
-                    <a href="mailto:ssalgard@projectrishi.org"><font color="#21A54A">ssalgar@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/vaish.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Vaish Sridhar</h5>
-                    <p style="color:#5d5d5d">Initiatives Associate
-                    <br>
-                    <a href="mailto:vsridhar@projectrishi.org"><font color="#21A54A">vsridhar@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/rahul.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Rahul Chandrupatla</h5>
-                    <p style="color:#5d5d5d">Initiatives Associate
-                    <br>
-                    <a href="mailto:rchandrupatla@projectrishi.org"><font color="#21A54A">rchandrupatla@projectrishi.org</font></a></p>
-                </div>
+            <h5 style="color:#5d5d5d">{{ n.name }}</h5>
+            <p style="color:#5d5d5d">{{ n.position }}<br><a href="mailto:{{ n.email }}"><font color="#21A54A">{{ n.email }}</font></a>
+            </p>
+        </div>
+        {% endfor %}
 
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Founders</h3>
+                <br>
+                <!-- <p style="color:#5d5d5d">Add Description Here.</p> -->
+                <br> 
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/harish.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Harish Shanker</h5>
-                    <p style="color:#5d5d5d">Director of Special Projects
-                    <br>
-                    <a href="mailto:hshanker@projectrishi.org"><font color="#21A54A">hshanker@projectrishi.org</font></a></p>
-                </div> 
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ishanee.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Ishanee Dighe</h5>
-                    <p style="color:#5d5d5d">Secretary
-                    <br>
-                    <a href="mailto:idighe@projectrishi.org"><font color="#21A54A">idighe@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/shreyas.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Shreyas Bharadwaj</h5>
-                    <p style="color:#5d5d5d">Director of Research: Soccent
-                    <br>
-                    <a href="mailto:sbharadwaj@projectrishi.org"><font color="#21A54A">sbharadwaj@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/mounika.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Mounika Kandalam</h5>
-                    <p style="color:#5d5d5d">Director of Chapter Development
-                    <br>
-                    <a href="mailto:mkandalam@projectrishi.org"><font color="#21A54A">mkandalam@projectrishi.org</font></a></p>
-                </div>  
+        </div>
 
+        <div class="row">
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/drsri.png">
+                </div>
+                <h5 style="color:#5d5d5d">Dr. Eri Srivatsan</h5>
+                <p style="color:#5d5d5d">Founder
+                <br>
+                <!-- <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a> --></p>
+            </div>                        
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="https://image.freepik.com/free-icon/user-male-shape-in-a-circle--ios-7-interface-symbol_318-35357.png">
+                </div>
+                <h5 style="color:#5d5d5d">Dr. Grant Lee</h5>
+                <p style="color:#5d5d5d">Founder
+                <br>
+                <!-- <a href="mailto:asekar@projectrishi.org"><font color="#21A54A">asekar@projectrishi.org</font></a> --></p>
             </div>
-            <div class="row">
-               <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ucsd_radhika.jpg">
-                    </div>
-                    <h5 style="color:#5d5d5d">Radhika Gulhar</h5>
-                    <p style="color:#5d5d5d">Director of Special Events & Alumni Relations
-                    <br>
-                    <a href="mailto:rgulhar@projectrishi.org"><font color="#21A54A">rgulhar@projectrishi.org</font></a></p>
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/danchoi.png">
                 </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/harrison.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Harrison Wu</h5>
-                    <p style="color:#5d5d5d">Educational Cirriculum
-                    <br>
-                    <a href="mailto:hwu@projectrishi.org"><font color="#21A54A">hwu@projectrishi.org</font></a></p>
-                </div>
-                <div class="col-md-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/amirp.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Amir Patel</h5>
-                    <p style="color:#5d5d5d">Educational Cirriculum
-                    <br>
-                    <a href="mailto:apatel@projectrishi.org"><font color="#21A54A">apatel@projectrishi.org</font></a></p>
-                </div>
+                <h5 style="color:#5d5d5d">Daniel Choi</h5>
+                <p style="color:#5d5d5d">Founder
+                <br>
+                <!-- <a href="mailto:graman@projectrishi.org"><font color="#21A54A">graman@projectrishi.org</font></a> --></p>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 style="color:#5d5d5d">Our Founders</h3>
-                    <br>
-                    <!-- <p style="color:#5d5d5d">Add Description Here.</p> -->
-                    <br> 
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ravi.png">
                 </div>
+                <h5 style="color:#5d5d5d">Dr. Ravi Menghani</h5>
+                <p style="color:#5d5d5d">Founder, Executive Director
+                <br>
+                <!-- <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a> --></p>
+            </div>                        
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/aswin.png">
+                </div>
+                <h5 style="color:#5d5d5d">Aswin Sekar</h5>
+                <p style="color:#5d5d5d">Founder, Assistant Director
+                <br>
+                <!-- <a href="mailto:asekar@projectrishi.org"><font color="#21A54A">asekar@projectrishi.org</font></a> --></p>
             </div>
-            <div class="row">
-                <div class="col-md-15 col-sm-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/drsri.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Dr. Eri Srivatsan</h5>
-                    <p style="color:#5d5d5d">Founder
-                    <br>
-                    <!-- <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a> --></p>
-                </div>                        
-                <div class="col-md-15 col-sm-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="https://image.freepik.com/free-icon/user-male-shape-in-a-circle--ios-7-interface-symbol_318-35357.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Dr. Grant Lee</h5>
-                    <p style="color:#5d5d5d">Founder
-                    <br>
-                    <!-- <a href="mailto:asekar@projectrishi.org"><font color="#21A54A">asekar@projectrishi.org</font></a> --></p>
-                </div>
-                <div class="col-md-15 col-sm-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/danchoi.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Daniel Choi</h5>
-                    <p style="color:#5d5d5d">Founder
-                    <br>
-                    <!-- <a href="mailto:graman@projectrishi.org"><font color="#21A54A">graman@projectrishi.org</font></a> --></p>
-                </div>
-                <div class="col-md-15 col-sm-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ravi.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Dr. Ravi Menghani</h5>
-                    <p style="color:#5d5d5d">Founder, Executive Director
-                    <br>
-                    <!-- <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a> --></p>
-                </div>                        
-                <div class="col-md-15 col-sm-3">
-                    <div class="portfolio-item">
-                        <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/aswin.png">
-                    </div>
-                    <h5 style="color:#5d5d5d">Aswin Sekar</h5>
-                    <p style="color:#5d5d5d">Founder, Assistant Director
-                    <br>
-                    <!-- <a href="mailto:asekar@projectrishi.org"><font color="#21A54A">asekar@projectrishi.org</font></a> --></p>
-                </div>
-            </div>
-        <div>
+        </div>
     </section>
 
     <!-- DONORS -->
@@ -373,26 +199,24 @@
     </div>
     
     <section class="container content-section text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Promise</h3>
+                <br>
+                <p style="color:#5d5d5d">We believe in transparency and accountability. Since our promise to our donors is that we utilize 100% of their donations towards projects, we make accessible our annual financial reports and statements.</p>
+                <br>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h3 style="color:#5d5d5d">Our Promise</h3>
-                    <br>
-                    <p style="color:#5d5d5d">We believe in transparency and accountability. Since our promise to our donors is that we utilize 100% of their donations towards projects, we make accessible our annual financial reports and statements.</p>
-                    <br>
+                <div class="col-md-4">
+                    <p><a href="https://projectrishi.box.com/v/annual-report-2015" target="_blank" class="btn btn-default btn-lg">2015 Annual Report</a></p>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <p><a href="https://projectrishi.box.com/v/annual-report-2015" target="_blank" class="btn btn-default btn-lg">2015 Annual Report</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <p><a href="https://projectrishi.box.com/financial-report-2014" target="_blank" class="btn btn-default btn-lg">2014 Annual Report</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <p><a href="https://projectrishi.box.com/financial-report-2013" target="_blank" class="btn btn-default btn-lg">2013 Annual Report</a></p>
-                    </div>
+                <div class="col-md-4">
+                    <p><a href="https://projectrishi.box.com/financial-report-2014" target="_blank" class="btn btn-default btn-lg">2014 Annual Report</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="https://projectrishi.box.com/financial-report-2013" target="_blank" class="btn btn-default btn-lg">2013 Annual Report</a></p>
                 </div>
             </div>
         </div>

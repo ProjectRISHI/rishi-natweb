@@ -3,39 +3,47 @@ from lib import gscrape
 
 app = Flask(__name__)
 
-chap_apply = "https://spreadsheets.google.com/feeds/list/1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0/od6/public/basic?alt=json"
-marq = "https://spreadsheets.google.com/feeds/list/15odV2nwZvLJLvBi5g51Ma8UsgN2WSCKiDt0JeyhEthw/od6/public/basic?alt=json"
+chap = "1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0"
+marq = "15odV2nwZvLJLvBi5g51Ma8UsgN2WSCKiDt0JeyhEthw"
+natmem = "1VTqQ4nyNBbff_ykGOGt0vdnRly8r93ja01sJVWVCgmw"
+uclaexec= "19hPOVSAqWRPMGoVySLVjMoywA2o4ukMS3tRoEh8SmXY"
+ucbexec = "17KCKd-x8WL5NJHL1dnFex3zHAfSGCqrqCsC0q6Fqljw"
+ucsdexec = ""
+ucdexec = "19AzcQmIH7r94H1QV0qpP89lOKWWkLdvBjIEMw7ibHUU"
+uciexec = "1YalAaHrQH8b9Fd41sWw9-komgr70-vBPE8SV2oo5mzY"
+nuexec = "1EcKGSB41tkJhRVVOAvS5hOs0cd2dZAnk7dfW3leg5V0"
+ucrexec = "1qdgh2YRp13qg1i5ZZXaLwzkR1hODkBOsaddrcPVPMYo"
+uscexec = ""
+cppexec = ""
+purdueexec = "" 
 
-chap_apply=gscrape.getEntry(chap_apply)
-chap_apply=gscrape.getFeedList(chap_apply)
-marq=gscrape.getEntry(marq)
-marq=gscrape.getFeedList(marq)
+marquee=gscrape.getMarqueeFeed(marq)
+chap=gscrape.getAppFeed(chap)
+memfeed=map(gscrape.getMemberFeed,[natmem,uclaexec,ucbexec,
+	ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec])
 
 @app.route('/')
 def index():
-	marquee=list()
-	for dic in marq:
-		marquee.append({"content":gscrape.getMarquee(dic),"link":gscrape.getMarqueeLink(dic)})
 	return render_template("index.html", title="Home",marquee=marquee)
 
 @app.route('/about')
 def about():
-	return render_template("about.html", title="About")
+	return render_template("about.html", title="About", national=memfeed[0])
 
 @app.route('/apply')
 def apply():
-	appl=list()
-	for dic in chap_apply:
-		appl.append({"chapter":gscrape.getChapter(dic),"due_date":gscrape.getDueDate(dic),"link":gscrape.getAppLink(dic),"contact":gscrape.getContactInfo(dic),"seal":gscrape.getSeal(dic)})
-	return render_template("apply.html",title="Apply",appl=appl)
+	return render_template("apply.html",title="Apply",appl=chap)
 
 @app.route('/blog')
 def blog():
-	return render_template("blog.html", title="blog")
+	return render_template("blog.html", title="Blog")
 
 @app.route('/chapters')
 def chapters():
-	return render_template("chapters.html", title="Chapters")
+	return render_template("chapters.html", title="Chapters",
+		chapter=chap,uclae=memfeed[1],ucbe=memfeed[2],ucsde=memfeed[3],
+		ucde=memfeed[4],ucie=memfeed[5],nue=memfeed[6],ucre=memfeed[7],
+		usce=memfeed[8],cppe=memfeed[9],purduee=memfeed[10])
 
 @app.route('/donate')
 def donate():
@@ -90,4 +98,4 @@ def rishi_pay():
 	return render_template("rishi-pay.html",title="RISHI Pay")
 
 if __name__=="__main__":
-	app.run(debug=False)
+	app.run(debug=True)
