@@ -1,5 +1,6 @@
 from flask import Flask,request,render_template
 from lib import gscrape
+from time import time
 
 app = Flask(__name__)
 
@@ -19,8 +20,8 @@ purdueexec = ""
 
 marquee=gscrape.getMarqueeFeed(marq)
 chap=gscrape.getAppFeed(chap)
-memfeed=map(gscrape.getMemberFeed,[natmem,uclaexec,ucbexec,
-	ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec])
+memfeed=map(gscrape.getMemberFeed,(natmem,uclaexec,ucbexec,
+	ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec))
 
 @app.route('/')
 def index():
@@ -97,5 +98,13 @@ def projects():
 def rishi_pay():
 	return render_template("rishi-pay.html",title="RISHI Pay")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('error.html',title="Error"), 404
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('error.html', title="Error"), 500
+
 if __name__=="__main__":
-	app.run(debug=True)
+	app.run(debug=False)
