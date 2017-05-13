@@ -262,7 +262,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/banner/home.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/home.png) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -351,23 +351,23 @@ a:focus {
 
 .donate {
     width: 100%;
-    background: url(../img/banner/donate.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/donate.png) no-repeat bottom center scroll;
 }
 
 .chap {
-    background: url(../img/banner/chapter.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/chapter.png) no-repeat bottom center scroll;
 }
 .proj {
-    background: url(../img/banner/proj.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/proj.png) no-repeat bottom center scroll;
 }
 .blog {
-    background: url(../img/banner/blog.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/blog.png) no-repeat bottom center scroll;
 }
 .about {
-    background: url(../img/banner/about.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/about.png) no-repeat bottom center scroll;
 }
 .error {
-    background: url(../img/banner/error.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/error.png) no-repeat bottom center scroll;
 }
 
 .btn-circle {
@@ -475,7 +475,7 @@ a:focus {
     width: 100%;
     height: auto;
     padding: 100px 0;
-    background: url(../img/proj_feat/feat_health.png) no-repeat bottom center scroll;
+    background: url(http://s3.projectrishi.org/img/proj_feat/feat_health.png) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -509,7 +509,7 @@ a:focus {
     width: 100%;
     padding-top: 75px;
     color: #fff;
-    background: url(../img/banner/projectbanner.png) no-repeat center center scroll;
+    background: url(http://s3.projectrishi.org/img/banner/projectbanner.png) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
