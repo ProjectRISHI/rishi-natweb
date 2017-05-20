@@ -1,8 +1,11 @@
 from flask import Flask,request,render_template
+from flask_cache import Cache
 from lib import gscrape
 from time import time
 
 app = Flask(__name__)
+app.config['CACHE_TYPE'] = 'simple'
+app.cache=Cache(app)
 
 chap = "1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0"
 marq = "15odV2nwZvLJLvBi5g51Ma8UsgN2WSCKiDt0JeyhEthw"
@@ -18,21 +21,41 @@ uscexec = ""
 cppexec = ""
 purdueexec = "" 
 
-marquee=gscrape.getMarqueeFeed(marq)
-chap=gscrape.getAppFeed(chap)
-memfeed=map(gscrape.getMemberFeed,(natmem,uclaexec,ucbexec,
-	ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec))
+# marquee=gscrape.getMarqueeFeed(marq)
+# chap=gscrape.getAppFeed(chap)
+# memfeed=map(gscrape.getMemberFeed,(natmem,uclaexec,ucbexec,
+# 	ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec))
+
+@app.cache.cached(key_prefix="marquee")
+def get_marquee():
+	return gscrape.getMarqueeFeed(marq)
+
+@app.cache.cached(key_prefix="appfeed")
+def get_appfeed():
+	return gscrape.getAppFeed(chap)
+
+@app.cache.cached(key_prefix="natmem")
+def get_national_members():
+	return gscrape.getMemberFeed(natmem)
+
+@app.cache.cached(key_prefix="memberfeed")
+def get_member_feed():
+	return map(gscrape.getMemberFeed,(uclaexec,ucbexec,
+		ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec))
 
 @app.route('/')
 def index():
+	marquee=get_marquee()
 	return render_template("index.html", title="Home",marquee=marquee)
 
 @app.route('/about')
 def about():
-	return render_template("about.html", title="About", national=memfeed[0])
+	nat_mem=get_national_members()
+	return render_template("about.html", title="About", national=nat_mem)
 
 @app.route('/apply')
 def apply():
+	chap=get_appfeed()
 	return render_template("apply.html",title="Apply",appl=chap)
 
 @app.route('/blog')
@@ -41,10 +64,12 @@ def blog():
 
 @app.route('/chapters')
 def chapters():
+	memfeed=get_member_feed()
+	chap=get_appfeed()
 	return render_template("chapters.html", title="Chapters",
-		chapter=chap,uclae=memfeed[1],ucbe=memfeed[2],ucsde=memfeed[3],
-		ucde=memfeed[4],ucie=memfeed[5],nue=memfeed[6],ucre=memfeed[7],
-		usce=memfeed[8],cppe=memfeed[9],purduee=memfeed[10])
+		chapter=chap,uclae=memfeed[0],ucbe=memfeed[1],ucsde=memfeed[2],
+		ucde=memfeed[3],ucie=memfeed[4],nue=memfeed[5],ucre=memfeed[6],
+		usce=memfeed[7],cppe=memfeed[8],purduee=memfeed[9])
 
 @app.route('/donate')
 def donate():
@@ -105,6 +130,7 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('error.html', title="Error"), 500
+
 
 if __name__=="__main__":
 	app.run(debug=False)
