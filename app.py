@@ -1,11 +1,8 @@
 from flask import Flask,request,render_template
 from flask_cache import Cache
+from flask_compress import Compress
 from lib import gscrape
 from time import time
-
-app = Flask(__name__)
-app.config['CACHE_TYPE'] = 'simple'
-app.cache=Cache(app)
 
 chap = "1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0"
 marq = "15odV2nwZvLJLvBi5g51Ma8UsgN2WSCKiDt0JeyhEthw"
@@ -19,12 +16,12 @@ nuexec = "1EcKGSB41tkJhRVVOAvS5hOs0cd2dZAnk7dfW3leg5V0"
 ucrexec = "1qdgh2YRp13qg1i5ZZXaLwzkR1hODkBOsaddrcPVPMYo"
 uscexec = ""
 cppexec = ""
-purdueexec = "" 
+purdueexec = ""
 
-# marquee=gscrape.getMarqueeFeed(marq)
-# chap=gscrape.getAppFeed(chap)
-# memfeed=map(gscrape.getMemberFeed,(natmem,uclaexec,ucbexec,
-# 	ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec))
+app = Flask(__name__)
+app.config['CACHE_TYPE'] = 'simple'
+app.cache=Cache(app)
+Compress(app)
 
 @app.cache.cached(key_prefix="marquee")
 def get_marquee():
