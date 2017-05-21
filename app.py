@@ -18,6 +18,7 @@ ucrexec = "1qdgh2YRp13qg1i5ZZXaLwzkR1hODkBOsaddrcPVPMYo"
 uscexec = ""
 cppexec = ""
 purdueexec = ""
+drexelexec = "1CZDdMQ4zt6rTuPVvRNHrMO0n85jkNknZ17ZcMc-q7N0"
 
 app = Flask(__name__)
 app.config['CACHE_TYPE'] = 'simple'
@@ -40,7 +41,7 @@ def get_national_members():
 @app.cache.cached(key_prefix="memberfeed")
 def get_member_feed():
 	return map(gscrape.getMemberFeed,(uclaexec,ucbexec,
-		ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec))
+		ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec,drexelexec))
 
 @app.route('/')
 def index():
@@ -68,11 +69,12 @@ def chapters():
 	return render_template("chapters.html", title="Chapters",
 		chapter=chap,uclae=memfeed[0],ucbe=memfeed[1],ucsde=memfeed[2],
 		ucde=memfeed[3],ucie=memfeed[4],nue=memfeed[5],ucre=memfeed[6],
-		usce=memfeed[7],cppe=memfeed[8],purduee=memfeed[9])
+		usce=memfeed[7],cppe=memfeed[8],purduee=memfeed[9],drexele=memfeed[10])
 
 @app.route('/donate')
 def donate():
-	return render_template("donate.html",title="Donate")
+	chap=get_appfeed()
+	return render_template("donate.html",title="Donate",chapters=chap)
 
 @app.route('/education')
 def education():

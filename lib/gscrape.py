@@ -76,6 +76,13 @@ def getHashtag(dic):
 	"""
 	return str(dic["content"]["$t"]).split(',')[4].split(':')[1].strip()
 
+def getChapterStatus(dic):
+	"""Returns the current status of the relevant chapter.
+
+	dic -- Dictionary from the JSON with all values.
+	"""
+	return str(dic["content"]["$t"]).split(',')[5].split(':')[1].strip()
+
 def getMarquee(dic):
 	"""Returns messages to display on Home. 
 
@@ -128,7 +135,8 @@ def getAppFeed(key):
 	key -- Google Spreadsheet Key
 	"""
 	feed=getFeedList(key)
-	return ({"chapter":getTitle(dic),"hashtag":getHashtag(dic),"due_date":getDueDate(dic),"link":getAppLink(dic),"contact":getContactInfo(dic),"seal":getSeal(dic)} for dic in feed)
+	return ({"chapter":getTitle(dic),"hashtag":getHashtag(dic),"due_date":getDueDate(dic),"link":getAppLink(dic),
+		"contact":getContactInfo(dic),"seal":getSeal(dic),"status":getChapterStatus(dic)} for dic in feed)
 
 def getMemberFeed(key):
 	"""Returns a tuple of Dictionaries with content for Member Profiles including National. 
