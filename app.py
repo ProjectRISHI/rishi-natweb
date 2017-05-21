@@ -1,3 +1,4 @@
+import os
 from flask import Flask,request,render_template
 from flask_cache import Cache
 from flask_compress import Compress
@@ -20,6 +21,7 @@ purdueexec = ""
 
 app = Flask(__name__)
 app.config['CACHE_TYPE'] = 'simple'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 300
 app.cache=Cache(app)
 Compress(app)
 
