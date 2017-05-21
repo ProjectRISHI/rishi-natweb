@@ -130,6 +130,5 @@ def page_not_found(e):
 def internal_server_error(e):
     return render_template('error.html', title="Error"), 500
 
-
 if __name__=="__main__":
 	app.run(debug=False)
