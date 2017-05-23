@@ -46,7 +46,8 @@ def get_member_feed():
 @app.route('/')
 def index():
 	marquee=get_marquee()
-	return render_template("index.html", title="Home",marquee=marquee)
+	chap=get_appfeed()
+	return render_template("index.html", title="Home",marquee=marquee,chapters=chap)
 
 @app.route('/about')
 def about():

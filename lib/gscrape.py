@@ -110,13 +110,14 @@ def getEntry(key):
 	return feed["entry"]
 
 def getFeedList(key):
-	"""Takes in the key to reuturn list of content values. 
+	"""Takes in the key to return list of content values. 
 
 	key -- Google Spreadsheet Key
 	"""
 	obj=getEntry(key)
 	y=(x for x in obj)
 	return y
+
 
 # =======================================================
 # Main Functions for Feed
