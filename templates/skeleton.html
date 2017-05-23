@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{{ title }} | Project RISHI (Rural India Social and Health Improvement)</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://s3.projectrishi.org/img/faviconit/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="http://s3.projectrishi.org/img/faviconit/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="196x196" href="http://s3.projectrishi.org/img/faviconit/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="http://s3.projectrishi.org/img/faviconit/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://s3.projectrishi.org/img/faviconit/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="http://s3.projectrishi.org/img/faviconit/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://s3.projectrishi.org/img/faviconit/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://s3.projectrishi.org/img/faviconit/favicon-16.png">
+    <link rel="apple-touch-icon" href="http://s3.projectrishi.org/img/faviconit/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://s3.projectrishi.org/img/faviconit/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://s3.projectrishi.org/img/faviconit/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://s3.projectrishi.org/img/faviconit/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://s3.projectrishi.org/img/faviconit/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://s3.projectrishi.org/img/faviconit/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://s3.projectrishi.org/img/faviconit/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://s3.projectrishi.org/img/faviconit/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://s3.projectrishi.org/img/faviconit/favicon-180.png">  
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+    
+    <!-- Medium -->
+    <script async src="https://static.medium.com/embed.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20442992-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+    
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav  class="navbar navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <span style="background-color:black;" class="sr-only">Toggle navigation</span>
+                    <span style="background-color:black;" class="icon-bar"></span>
+                    <span style="background-color:black;" class="icon-bar"></span>
+                    <span style="background-color:black;" class="icon-bar"></span>
+                </button>
+                <a  class="navbar-brand" href="/">
+                    <img class="logo hidden-sm hidden-xs" id="logolg" src="http://s3.projectrishi.org/img/logos/logoweb.png"/>
+                    <img id="logo-sm-md"class="hidden-lg hidden-md" width="130" height="65" src="http://s3.projectrishi.org/img/logos/logo2.png"/>
+                </a>
+            </div>    
+    <!-- Navbar -->
+    {% block navbar %}
+    {% endblock %}
+    <!-- End Navbar -->
+        
+    <!-- Intro Header -->
+    {% block header %}
+    {% endblock %}
+    <!-- End Header -->
+
+    <!-- Section -->
+    {% block section %}
+    {% endblock %}
+    <!-- End Section -->
+
+    <!-- Donate Section -->
+    <div class="sec">
+        <div class="container">
+            <p align="middle">100% of your donation brings empowering solutions to people in need. Support us today!&nbsp;&nbsp;&nbsp;<a href="{{ url_for('donate') }}"><strong>DONATE >></strong></a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" >
+            <div class="row text-center">
+                <div class="col-sm-3">
+                    <h5><font color="#2AA44E">About</font></h5>
+                    <p align="middle" style="color:#5d5d5d">
+                        <a href="{{ url_for('projects') }}"><font color="#5d5d5d">Projects</font></a> <br>
+                        <a href="{{ url_for('methodology') }}"><font color="#5d5d5d">Methodology</font></a> <br>
+                        <a href="{{ url_for('chapters') }}"><font color="#5d5d5d">Chapters</font></a> <br>
+                        <a href="{{ url_for('locations') }}"><font color="#5d5d5d">Locations</font></a> <br>
+                        <a href="{{ url_for('blog') }}"><font color="#5d5d5d">Blog</font></a> <br><br></p>
+                </div>
+                <div class="col-sm-3">
+                    <h5><font color="#292D72">Connect</font></h5>
+                    <p align="middle">
+                    <a href="http://www.instagram.com/projectrishi"><font color="#5d5d5d">Instagram</font></a> <br>
+                    <a href="http://www.facebook.com/projectrishi"><font color="#5d5d5d">Facebook</font></a> <br>
+                    <a href="http://www.twitter.com/projectrishi"><font color="#5d5d5d">Twitter</font></a> <br>
+                    <a href="https://www.linkedin.com/company/projectrishi"><font color="#5d5d5d">LinkedIn</font></a> <br>
+                    <a href="http://eepurl.com/bIbxVb"><font color="#5d5d5d">Newsletter</font></a> <br>
+                    <a href="apply"><font color="#5d5d5d">Apply</font></a> <br><br></p>
+                </div>
+                <div class="col-sm-3">
+                    <h5 align="middle"><a href="{{ url_for('donate') }}"><strong>Donate</strong></a></h5>
+                    <h5 align="middle"><a href="mailto:contact@projectrishi.org"><strong>Contact</strong></a></h5><br>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <br>
+                    <a href="http://www.projectrishi.org"><img id="logofoot" align="middle" src="http://s3.projectrishi.org/img/logos/logo3.png"></a>
+                    <p style="font-size:80%;"class="text-center"><font color="#5d5d5d">Copyright &copy; Project RISHI 2017</font>
+                    <br>
+                    <a href="{{ url_for('privacy') }}"><font color="#5d5d5d">Privacy Policy</font></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+
+</body>
+
+</html>

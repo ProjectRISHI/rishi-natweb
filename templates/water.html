@@ -1,0 +1,163 @@
+{% extends "skeleton.html" %}
+
+    {% block navbar %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <li class="active">
+                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                    </li>            
+                    <li>
+                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}"><h5>About</h5></a>
+                    </li>
+                    <li style="padding-top:5px;">
+                        <a class="btn btn-default btn-sm btn-navbar" href="{{ url_for('donate') }}"><h5>DONATE</h5></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% endblock %}
+
+        
+    {% block header %}
+    <header class="intro_sub proj">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p style="font-size:160%" align="left" class="brand-heading"></p>
+                        <p style="font-size:110%" align="left" class="intro-text"></p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <!-- Small Green Border -->
+    <div class="apply"></div>
+    {% endblock %}
+
+    {% block section %}
+    <section id="about" class="container content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div align="middle" class="col-md-12">
+                    <img src="http://s3.projectrishi.org/img/project_icons/water.png"/>
+                    <br>
+                    <br>
+                </div>
+           </div>
+           <div class="row">
+                <h3><font style="color:#5d5d5d">WATER & SANITATION</font></h3>
+           </div>
+<!--             <div class="row">
+                <p><strong><font style="color:#5d5d5d">37.7 million rural Indians lose 73 million working days, or roughly $600 billion, to water-borne diseases each year.</font></strong></p>
+           </div> -->
+           <div class="row">
+                <p><strong><font style="color:#5d5d5d">Page Coming Soon!</strong></p>
+           </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+<!--     <section class="container grey-section text-center">
+        <div class="container">
+           <div class="row">
+                <div class="col-md-3">
+                    <img height="200" width="200" src="img/stats/15.png"/>
+                    <br><br>
+                    <p><strong><font style="color:#5d5d5d">of deaths in kids under the age of 5 occur from diarrheal disease</font></strong></p>
+                </div>
+                <div class="col-md-3">
+                    <img height="200" width="200" src="img/stats/21.png"/>
+                    <br><br>
+                    <p><strong><font style="color:#5d5d5d">of the rural Indian population has access to a toilet</font></strong></p>
+                </div>
+                <div class="col-md-3">
+                    <img height="200" width="200" src="img/stats/46.png"/>
+                    <br><br>
+                    <p><strong><font style="color:#5d5d5d">of communicable diseases in India are related to unsafe water</font></strong></p>
+                </div>
+                <div class="col-md-3">
+                    <img height="200" width="200" src="img/stats/50.png"/>
+                    <br><br>
+                    <p><strong><font style="color:#5d5d5d">of the population or less use "improved" sanitation</font></strong></p>
+                </div>
+           </div>
+           <br>
+           <div class="row">
+                <div class="col-md-12">
+                    <p><strong><font size="5" style="color:#292D72">THESE ARE ALL PREVENTABLE</font></strong></p>
+                </div>
+           </div>
+        </div>
+    </section> -->
+
+    <!-- Projects -->
+<!--     <section class="container blue-section">
+        <div class="container">
+            <div class="row">
+                <div align="middle" class="col-md-12">
+                    <h3><font style-"color:white">Our Projects</font></h3>
+                    <br>
+                    <br>
+                </div>
+           </div>
+           <div class="row">
+                <div align="left" class="col-md-6">
+                    <h4>Free Health Clinic</h4>
+                    <p align="left"><strong><font style="color:#F16822">Location: </font><font style="color:white">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#F16822">Chapter Lead: </font><font style="color:white">UCLA</font><br><font style="color:#F16822">Methodology Stage: </font><font style="color:white">#3 Fundraise</font></strong>
+                    <br><br>
+                    <font style="color:white">Project Description Goes Here </font></p>
+                </div>
+                <div align="left" class="col-md-6">
+                    <h4>Free Health Clinic</h4>
+                    <p align="left"><strong><font style="color:#F16822">Location: </font><font style="color:white">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#F16822">Chapter Lead: </font><font style="color:white">UCLA</font><br><font style="color:#F16822">Methodology Stage: </font><font style="color:white">#3 Fundraise</font></strong>
+                    <br><br>
+                    <font style="color:white">Project Description Goes Here </font></p>
+                </div>
+           </div>
+           <div class="row">
+                <div align="left" class="col-md-6">
+                    <h4>Free Health Clinic</h4>
+                    <p align="left"><strong><font style="color:#F16822">Location: </font><font style="color:white">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#F16822">Chapter Lead: </font><font style="color:white">UCLA</font><br><font style="color:#F16822">Methodology Stage: </font><font style="color:white">#3 Fundraise</font></strong>
+                    <br><br>
+                    <font style="color:white">Project Description Goes Here </font></p>
+                </div>
+                <div align="left" class="col-md-6">
+                    <h4>Free Health Clinic</h4>
+                    <p align="left"><strong><font style="color:#F16822">Location: </font><font style="color:white">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#F16822">Chapter Lead: </font><font style="color:white">UCLA</font><br><font style="color:#F16822">Methodology Stage: </font><font style="color:white">#3 Fundraise</font></strong>
+                    <br><br>
+                    <font style="color:white">Project Description Goes Here </font></p>
+                </div>
+           </div>
+        </div>
+    </section> -->
+
+
+    <!-- Featured Project -->
+<!--     <section class="container img-section-1 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div align="left" class="col-md-6">
+                    <h4><font style="color:#7392c8">Featured Project: </font><font style="color:white">Free Health Clinic</font></h4>
+                    <br>
+                    <p align="left"><strong><font style="color:#7392c8">Location: </font><font style="color:white">Vadamanappakkam, Tamil Nadu</font><br><font style="color:#7392c8">Chapter Lead: </font><font style="color:white">UCLA</font></strong><br><font style="color:#7392c8">Methodology Stage: </font><font style="color:white">#3 Fundraise</font></strong></p>
+                    <br>
+                    <p align="left"><font style="color:white">Project Description Goes Here </font></p>
+                </div>
+           </div>
+        </div>
+    </section> -->
+
+    {% endblock %}

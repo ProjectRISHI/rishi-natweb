@@ -1,0 +1,190 @@
+{% extends "skeleton.html" %}
+
+    {% block navbar %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <li>
+                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                    </li>            
+                    <li>
+                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}"><h5>About</h5></a>
+                    </li>
+                    <li style="padding-top:5px;">
+                        <a class="btn btn-default btn-sm btn-navbar" href="{{ url_for('donate') }}"><h5>DONATE</h5></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% endblock %}
+
+        
+    {% block header %}
+    <header class="intro_sub donate">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p align="left" class="brand-heading">"Be the Change you want to see in the World"</p>
+                        <p align="left" class="intro-text">-Mahatma Gandhi</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Small Green Border -->
+    <div class="apply"></div>
+    {% endblock %}
+
+    {% block section %}
+    <section class="container content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 style="color:#5d5d5d">DONATE and EMPOWER villagers in Rural India </h3><br>
+                    <!-- PayPal Logo --><img src="https://www.paypalobjects.com/webstatic/mktg/logo/bdg_payments_by_pp_2line.png" height="35" width="120"alt="PayPal Acceptance Mark"></a></td></tr></table><!-- PayPal Logo -->
+                    <br><br>
+                </div>
+            </div>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" role="form">
+                <input type="hidden" name="cmd" value="_donations">
+                <input type="hidden" name="business" value="donate@projectrishi.org">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <!-- <label for="firstname">First Name</label> -->
+                            <input type="text" name="first_name" class="form-control" id="firstname" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <!-- <label for="lastname">Last Name</label> -->
+                            <input type="text" name="last_name" class="form-control" id="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <!-- <label for="email"></label> -->
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <!-- <label for="pwd">Password:</label> -->
+                            <input type="text" name="amount" class="form-control" id="pwd" placeholder="Amount ($)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <select class="form-control" name="item_name">
+                                <option value="General Donation">General Donation</option>
+                            {% for c in chapters %}    
+                                <option value="{{ c.chapter }}">{{ c.chapter }}</option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <select class="form-control" name="item_number">
+                                <option value="All Projects">All Projects</option>
+                                <option value="Health">Health</option>
+                                <option value="Water">Water</option>
+                                <option value="Education">Education</option>
+                                <option value="Energy">Energy</option>
+                                <option value="Income">Income Generation</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-orange btn-lg">Submit Payment</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="75" width="75" src="http://s3.projectrishi.org/img/icon.png">
+                </div>
+                <h4 style="color:#5d5d5d">General Donation</h4>
+                <p style="color:#5d5d5d">100% of proceeds will go directly to our projects. You may choose to direct your donations towards an individual university chapter. </p>
+                <br>
+                <!-- <p><a href="projects" class="btn btn-default btn-lg">Projects</a></p> -->
+            </div>
+
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="75" width="75" src="http://s3.projectrishi.org/img/project_icons/health.png">
+                </div>
+                <h4 style="color:#5d5d5d">Health</h4>
+                <p style="color:#5d5d5d">We want to address the prevalence of numerous preventable diseases that exists due to a lack of access to both easily-accessible healthcare and adequate health education resources.</p>
+                <!-- <p><a href="health" class="btn btn-default btn-lg">Health</a></p> -->
+            </div>
+
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="75" width="75" src="http://s3.projectrishi.org/img/project_icons/water.png">
+                </div>
+                <h4 style="color:#5d5d5d">Water & Sanitation</h4>
+                <p style="color:#5d5d5d">We want to address the many water-borne disease that stem from a lack of access to clean drinking water and poor-to-nonexistent sewage and sanitation.</p>
+                <!-- <p><a href="water" class="btn btn-default btn-lg">Water</a></p> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="75" width="75" src="http://s3.projectrishi.org/img/project_icons/energy.png">
+                </div>
+                <h4 style="color:#5d5d5d">Renewable Energy</h4>
+                <p style="color:#5d5d5d">We want to address the ongoing damage to people's health and to their environments from not taking advantage of green energy resources.</p>
+                <!-- <p><a href="energy" class="btn btn-default btn-lg">Energy</a></p> -->
+            </div>
+                    
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="75" width="75" src="http://s3.projectrishi.org/img/project_icons/education.png">
+                </div>
+                <h4  style="color:#5d5d5d">Education</h4>
+                <p   style="color:#5d5d5d">We want to address the wide gap between the urban and rural literacy rate that exists due to the resource-limited rural school systems and non-existing educational support systems.</p>
+                <!-- <p><a href="education" class="btn btn-default btn-lg">Education</a></p> -->
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="75" width="75" src="http://s3.projectrishi.org/img/project_icons/income.png">
+                </div>
+                <h4  style="color:#5d5d5d">Income Generation</h4>
+                <p   style="color:#5d5d5d">We want to address the cycle of poverty that farmers and laborers are stuck in due to the  lack of opportunities to generate more income.</p>
+                <!-- <p><a href="income" class="btn btn-default btn-lg">Income</a></p> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p><a href="projects" class="btn btn-default btn-lg">Learn More about our Projects</a></p>
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}

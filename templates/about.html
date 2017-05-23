@@ -1,0 +1,330 @@
+{% extends "skeleton.html" %}
+
+    {% block navbar %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <li>
+                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                    </li>            
+                    <li>
+                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                    </li>
+                    <li class="active">
+                        <a href="{{ url_for('about') }}"><h5>About</h5></a>
+                    </li>
+                    <li style="padding-top:5px;">
+                        <a class="btn btn-default btn-sm btn-navbar" href="{{ url_for('donate') }}"><h5>DONATE</h5></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% endblock %}
+        
+    {% block header %}
+    <header class="intro_sub about">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p align="left" class="brand-heading">"My goal is to see healthy children, healthy families, and healthy communities."</p>
+                        <p align="left" class="intro-text">-Dr. Eri Srivatsan</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+    <!-- Small Green Border -->
+    <div class="apply"></div>
+    {% endblock %}
+
+    {% block section %}
+    <section class="container content-section text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Mission</h3>
+                <br>
+                <p style="color:#5d5d5d"><strong>Our mission is to promote the sustainable development of rural Indian communities. <br>In partnership with local community members and social enterprises, we identify issues central to our target communities and provide the resource to implement solutions through extensive field research and on-campus initiatives.</strong></p>
+                <br>
+                <h3 style="color:#5d5d5d">About Us</h3>
+                <br>
+                <p style="color:#5d5d5d">We are a diverse group of passtionate and energetic individuals moving forward the dialogue on equity and resilience through our projects. We operate on a university model where undergraduate chapters partner with villages in need and a single National team serves to empower these chapters with the resources and guidance. Finally, our donors who believe in our mission allow us to make our projects a reality.</p>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- OUR TEAM -->
+        <div class="row">
+            <div align="middle" class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Team</h3>
+                <br>
+                <p style="color:#5d5d5d">Our National Team consists of entrepreneurs, educators, business leaders, developers, students, and more who believe deeply in the power of innovation and initiative to improve social and health conditions in rural India.</p>
+                <br>
+            </div>
+        </div>
+
+        {% for n in national %}
+        <div class="col-md-3">
+            <div class="portfolio-item">
+                <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="{{ n.photo }}">
+            </div>
+            <h5 style="color:#5d5d5d">{{ n.name }}</h5>
+            <p style="color:#5d5d5d">{{ n.position }}<br><a href="mailto:{{ n.email }}"><font color="#21A54A">{{ n.email }}</font></a>
+            </p>
+        </div>
+        {% endfor %}
+
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Founders</h3>
+                <br>
+                <!-- <p style="color:#5d5d5d">Add Description Here.</p> -->
+                <br> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/drsri.png">
+                </div>
+                <h5 style="color:#5d5d5d">Dr. Eri Srivatsan</h5>
+                <p style="color:#5d5d5d">Founder
+                <br>
+                <!-- <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a> --></p>
+            </div>                        
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="https://image.freepik.com/free-icon/user-male-shape-in-a-circle--ios-7-interface-symbol_318-35357.png">
+                </div>
+                <h5 style="color:#5d5d5d">Dr. Grant Lee</h5>
+                <p style="color:#5d5d5d">Founder
+                <br>
+                <!-- <a href="mailto:asekar@projectrishi.org"><font color="#21A54A">asekar@projectrishi.org</font></a> --></p>
+            </div>
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/danchoi.png">
+                </div>
+                <h5 style="color:#5d5d5d">Daniel Choi</h5>
+                <p style="color:#5d5d5d">Founder
+                <br>
+                <!-- <a href="mailto:graman@projectrishi.org"><font color="#21A54A">graman@projectrishi.org</font></a> --></p>
+            </div>
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/ravi.png">
+                </div>
+                <h5 style="color:#5d5d5d">Dr. Ravi Menghani</h5>
+                <p style="color:#5d5d5d">Founder, Executive Director
+                <br>
+                <!-- <a href="mailto:rmenghani@projectrishi.org"><font color="#21A54A">rmenghani@projectrishi.org</font></a> --></p>
+            </div>                        
+            <div class="col-md-15 col-sm-3">
+                <div class="portfolio-item">
+                    <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/nat-team/aswin.png">
+                </div>
+                <h5 style="color:#5d5d5d">Aswin Sekar</h5>
+                <p style="color:#5d5d5d">Founder, Assistant Director
+                <br>
+                <!-- <a href="mailto:asekar@projectrishi.org"><font color="#21A54A">asekar@projectrishi.org</font></a> --></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONORS -->
+    <div class="grey-2">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <br>
+                    <h4 style="color:#4A4A4A">Our Donors</h4><br>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <p style="color:#5d5d5d">
+                        Dr. Marilene Wang & Dr. James Watson <br>
+                        Dr. Sampath Rajagopal & Nandini Rajagopal <br>
+                        Dr. Marilene Wang <br>
+                        Mrs. & Mr. Raghavan <br>
+                        Dr. Sampath Rajagopal and Dr. Nandini Rajagopal <br>
+                        Mrs. & Mr. Partha Srinivasan <br>
+                        Dr. Narayan and Dr. Vaidehi <br>
+                        Dr. PP Vaidyanathan & Dr. Usha Vaidyanathan <br>
+                        Dr. Sahas & Dr. Nandita Sampath <br>
+                        Mrs. Vasumathi Madhavan &  Mr. Madhavan <br>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p style="color:#5d5d5d">
+                        Dr. Eri Rajaraman & Mrs. Sridevi Rajaraman <br>
+                        Dr. Ravi Menghani <br>
+                        Mrs. & Mr. Sundar <br>
+                        Dr. Grant Lee <br>
+                        Mrs. & Mr. Eri Srikanth <br>
+                        Dr. Sahas & Nandita Sampath <br>
+                        Dr. Ganapathi & Dr. Padma <br>
+                        Raghavan & Geetha <br>
+                        Dr. Narayan & Dr. Vaidehi <br>
+                        Dr. Natarajan Venkatesan & Dr. Indra Venkatesan <br>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p style="color:#5d5d5d">
+                        Dr. Rajagopal & Dr. Sudha Rajagopal <br>
+                        Mrs & Mr. Ravi Vasudevan <br>
+                        Dr. Kumar Bugga & Mrs. Lakshmi Bugga <br>
+                        Dr. Swaminathan & Padmavathi <br>
+                        Dr. PP Vaidyanathan <br>
+                        Dr. Gani Ganapthi <br>
+                        Dr. Kumar & Lakshmi Bugga <br>
+                        Bharathi Vayuvegula <br>
+                        Sharmila Mudgal <br>
+                        Quantum Eye Group <br>
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <p><a data-toggle="modal" data-target="#donor" href=""><strong>See Full List >></strong></a></p>
+            </div>
+        </div>
+    </div>
+    
+    <section class="container content-section text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#5d5d5d">Our Promise</h3>
+                <br>
+                <p style="color:#5d5d5d">We believe in transparency and accountability. Since our promise to our donors is that we utilize 100% of their donations towards projects, we make accessible our annual financial reports and statements.</p>
+                <br>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><a href="https://projectrishi.box.com/v/annual-report-2015" target="_blank" class="btn btn-default btn-lg">2015 Annual Report</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="https://projectrishi.box.com/financial-report-2014" target="_blank" class="btn btn-default btn-lg">2014 Annual Report</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="https://projectrishi.box.com/financial-report-2013" target="_blank" class="btn btn-default btn-lg">2013 Annual Report</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UCLA Modal -->
+    <div id="donor" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content - UCLA -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="color:#4A4A4A" class="modal-title">Project RISHI Donors</h4>
+                </div>
+                <div style="color:#4A4A4A" class="modal-body">
+                    <p align="middle" style="color:#4A4A4A">100% of your donation brings empowering solutions to people in need. Thank you for your support!</p>
+                    <p style="color:#4A4A4A">Contact: <a href="mailto:donate@projectrishi.org"><font color="#21A54A"><strong>donate@projectrishi.org</strong></font></a> <br> <a href="donate"><strong>Donate</strong></a> to Project RISHI</p>
+                    <hr>
+                    <div class="row text-center">
+                        <h5 style="color:#4A4A4A"></h5>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-6">
+                            <p style="color:#5d5d5d">
+                                Adit <br>
+                                Agnes Pommier <br>
+                                Ameet Patel <br>
+                                Anjali Bhat <br>
+                                Anne Tahim <br>
+                                Arshya Gurbani <br>
+                                Avanish Aggarwal <br>
+                                Bajwa Family<br>
+                                Bharathi Vayuvegula <br>
+                                Bindu Bhansali <br>
+                                Bret Andersen <br>
+                                Chauhan Family<br>
+                                David Cook <br>
+                                Dilip Patel <br> 
+                                Dr. Gabbita <br>
+                                Dr. James Watson <br>
+                                Dr. Wang <br>
+                                Ed Draper<br>
+                                Farmer's Market <br>
+                                Ganga Swaminathan <br>
+                                Gani B. Ganapathi <br>
+                                Grant Lee <br>
+                                Harish Patel <br>
+                                Hasmukh Bhakta <br>
+                                Jeff Ross <br>
+                                Jeremy Gibbons <br>
+                                Kamalakar and Savitri Rambhatla <br>
+                                Kishan Family <br>
+                                Lynbrook High School <br>
+                                M.I. Venkatesan <br>
+                                Manish Mehta <br>
+                                Manubhai and Niruben Patel <br>
+                                Maria Caridad Lewis <br>
+                                Marilene Wang <br>
+                                Mark Johnson<br>
+                                Mustafa Dohadwala <br>
+                                Naresh Patel <br>
+                                Neeti Khaitan <br>
+                                Parthasarathi Srinivasan <br> 
+                                Pieter Noordam <br>
+                                PP Vaidyanathan <br>
+                                Prahba Sidharth <br>
+                                Priya Ganju <br>
+                                Radha Udayar and Muthusamy Muthiah <br> 
+                                Rajagopalan Family <br>
+                                Rakesh Patel <br>
+                                Ratnakumar V. Bugga <br> 
+                                Ravindra and Surekha Patel <br>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="color:#5d5d5d">
+                                Rimal Bera <br>
+                                Rini Sampath <br>
+                                Rohan Desai <br>
+                                Sagus and Nandita Sampath <br>
+                                Sampath and Nandini Rajagopalan <br>
+                                Savita Shrimali <br>
+                                Seema Reddy <br>
+                                Sharmila Mudgal <br>
+                                Shetoo and Priti Parikh <br>
+                                Shri Mandir <br>
+                                Smriti Deora <br>
+                                Soumajit Kundu <br>
+                                Sri and Laya Gorty <br>
+                                Sridhar Reddy <br>
+                                Subhash Garg <br>
+                                Sudha Ravichandran <br>
+                                Tejaswini Bommireddy <br>
+                                Ursheet Parikh <br>
+                                Vivek Y. Rao <br>
+                                West View & Irvington High School <br>
+                                Yeti Restaurant <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Donor Modal End -->
+    {% endblock %}
