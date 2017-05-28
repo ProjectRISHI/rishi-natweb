@@ -657,6 +657,76 @@
     </div>
     <!-- UC Riverside Modal End -->
 
+    <!-- Drexel Modal -->
+    <div id="drexel" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content - UCLA -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="color:#4A4A4A" class="modal-title">Drexel University</h4>
+                </div>
+                <div style="color:#4A4A4A" class="modal-body">
+                    <p style="color:#4A4A4A">The Drexel University chapter was founded in Fall 2016. The chapter officially adopted the village of Khalipur, in the Vadodara district of Gujarat. The first trip was conduced in January 2017 and the main disparities observed concern education, health, and energy. The Drexel chapter has partnered with M.S. University in Baroda to address these needs of the village and maintain the solutions to be implemented.</p>
+                    <p style="color:#4A4A4A">Contact: <a href="mailto:contact@projectrishi.org"><font color="#21A54A"><strong>contact@projectrishi.org</strong></font></a> <br> <a href="{{ url_for('donate') }}"><strong>Donate</strong></a> to the Purdue Chapter.</p>
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li class="active"><a href="#purdue1" data-toggle="tab"><h5 style="color:#4A4A4A" class="modal-title">Chapter Leaders</h5></a></li>
+                            <li><a href="" data-toggle="tab"><h5 style="color:#4A4A4A" class="modal-title">RISHI Perspective</h5></a></li>
+                            <li><a href="" data-toggle="tab"><h5 style="color:#4A4A4A" class="modal-title">Connect</h5></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="purdue1">
+                                <div class="container-fluid text-center">
+                                    <br><br>
+                                    {% for e in drexele %}
+                                    <div class="col-md-4">
+                                        <div class="portfolio-item">
+                                            <img align="middle" class="img-portfolio img-circle" height="150" width="150" src="{{ e.photo }}">
+                                        </div>
+                                        <h5 style="color:#5d5d5d">{{ e.name }}</h5>
+                                        <p style="color:#5d5d5d">{{ e.position }}
+                                        <br>
+                                        <a href="mailto:{{ e.email }}"><font color="#21A54A">{{ e.email }}</font></a></p>
+                                    </div> 
+                                    {% endfor %}                              
+                                </div>
+                            </div>
+                            <!-- Item 1 End -->
+                            <div class="tab-pane" id="drexel2">
+                                <div class="container-fluid text-center">
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 End -->
+                            <div class="tab-pane" id="drexel3">
+                                <div class="container-fluid text-center">
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprojectrishiucla%2F&tabs=timeline%2Cevents%2Cmessages&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=555148377941857" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Item 3 End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Drexel Modal End -->    
+
     <!-- Purdue Modal -->
     <div id="purdue" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
