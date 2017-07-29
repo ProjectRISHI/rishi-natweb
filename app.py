@@ -16,7 +16,7 @@ uciexec = "1YalAaHrQH8b9Fd41sWw9-komgr70-vBPE8SV2oo5mzY"
 nuexec = "1EcKGSB41tkJhRVVOAvS5hOs0cd2dZAnk7dfW3leg5V0"
 ucrexec = "1qdgh2YRp13qg1i5ZZXaLwzkR1hODkBOsaddrcPVPMYo"
 uscexec = ""
-cppexec = ""
+cppexec = "1Vrt5w6o5Mo3Ths2VzaSjDoprwbvVh7enRy600Ck5gUY"
 purdueexec = ""
 drexelexec = "1CZDdMQ4zt6rTuPVvRNHrMO0n85jkNknZ17ZcMc-q7N0"
 
