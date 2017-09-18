@@ -149,3 +149,5 @@ def getMemberFeed(key):
 		return ({"name":getTitle(dic),"email": getEmail(dic),"position":getPosition(dic),"photo": getPhoto(dic)} for dic in feed)
 	else:
 		return ({"name":"","email":"","position":"","photo": ""}) 
+
+print getFeedList("1-baaza5A86lOv445NoGUzER1Q3TQp4ZBuEqU2TzASjw")
