@@ -150,4 +150,9 @@ def getMemberFeed(key):
 	else:
 		return ({"name":"","email":"","position":"","photo": ""}) 
 
-# print getFeedList("1-baaza5A86lOv445NoGUzER1Q3TQp4ZBuEqU2TzASjw")
+# print (getURL("1VTqQ4nyNBbff_ykGOGt0vdnRly8r93ja01sJVWVCgmw"))
+
+
+
+
+

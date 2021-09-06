@@ -2,7 +2,7 @@ import os
 from flask import Flask,request,render_template
 # from flask_cache import Cache
 from flask_compress import Compress
-# from lib import gscrape
+from lib import gscrape
 from time import time
 
 chap = "1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0"
