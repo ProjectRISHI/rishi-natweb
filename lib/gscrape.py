@@ -1,7 +1,7 @@
 """
 Helper Functions for Google Spreadhseet Parsing for RISHI-NATWEB.
 """
-from urllib2 import urlopen
+from urllib.request import urlopen 
 from json import loads
 
 __author__ = 'asinghal17'
@@ -150,4 +150,4 @@ def getMemberFeed(key):
 	else:
 		return ({"name":"","email":"","position":"","photo": ""}) 
 
-print getFeedList("1-baaza5A86lOv445NoGUzER1Q3TQp4ZBuEqU2TzASjw")
+# print getFeedList("1-baaza5A86lOv445NoGUzER1Q3TQp4ZBuEqU2TzASjw")

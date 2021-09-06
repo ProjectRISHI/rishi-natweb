@@ -5,13 +5,13 @@
             <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul  class="nav navbar-nav">
                     <li>
-                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                        <a href="{{ url_for('index') }}"><h5>Projects</h5></a>
                     </li>            
                     <li>
-                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                        <a href="{{ url_for('index') }}"><h5>Chapters</h5></a>
                     </li>
                     <li>
-                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                        <a href="{{ url_for('index') }}"><h5>Blog</h5></a>
                     </li>
                     <li>
                         <a href="{{ url_for('about') }}"><h5>About</h5></a>
@@ -93,9 +93,9 @@
                         <div class="form-group">
                             <select class="form-control" name="item_name">
                                 <option value="General Donation">General Donation</option>
-                            {% for c in chapters %}    
+<!--                             {% for c in chapters %}    
                                 <option value="{{ c.chapter }}">{{ c.chapter }}</option>
-                            {% endfor %}
+                            {% endfor %} -->
                             </select>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p><a href="projects" class="btn btn-default btn-lg">Learn More about our Projects</a></p>
+                <p><a href="{{ url_for('index') }}" class="btn btn-default btn-lg">Learn More about our Projects</a></p>
             </div>
         </div>
     </section>
