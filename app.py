@@ -61,9 +61,9 @@ def about():
 # 	# chap=get_appfeed()
 # 	return render_template("apply.html",title="Apply",appl=chap)
 
-# @app.route('/blog')
-# def blog():
-# 	return render_template("blog.html", title="Blog")
+@app.route('/blog')
+def blog():
+	return render_template("blog.html", title="Blog")
 
 # @app.route('/chapters')
 # def chapters():
