@@ -6,8 +6,6 @@
 *.twb
 *.tde
 *.xlsx
-*.jpg
-*.png
 *.ipynb_checkpoints
 *.settings
 *.htaccess
