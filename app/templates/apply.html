@@ -1,0 +1,66 @@
+{% extends "skeleton.html" %}
+
+    {% block navbar %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <li>
+                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                    </li>            
+                    <li>
+                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}"><h5>About</h5></a>
+                    </li>
+                    <li style="padding-top:5px;">
+                        <a class="btn btn-default btn-sm btn-navbar" href="{{ url_for('donate') }}"><h5>DONATE</h5></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% endblock %}
+        
+
+    {% block header %}
+    <header class="intro_sub chap">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p align="left" class="brand-heading">Ready to make a positive impact? Eager to network and work with like-minded undergraduates like yourself?</p>
+                        <p align="left" class="intro-text">If you are interested in joining us on our mission, please apply to be a part of your respective University Chapter.</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <!-- Small Green Border -->
+    <div class="apply"></div>
+    {% endblock %}
+
+    {% block section %}
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            {% for app in appl %}
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIvEHzNvsvmIuyc-ix0eSYy_OgjvkP11ZG2WtQEhT3IX6xUw/viewform?usp=send_form" ><img align="middle" class="img-portfolio img-circle" height="165" width="165" src="{{ app.seal }}"></a>
+                </div>
+                <h4 style="color:#4A4A4A">{{ app.chapter }}</h4>
+                <p style="color:#5d5d5d">Application Deadline: <strong>{{ app.due_date }}</strong> <br>
+                For more information contact:<br> <strong>{{ app.contact }}</strong> <br>
+                </p>
+                <p><a href="{{ app.link }}" class="btn btn-default btn-lg">Apply</a></p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endblock %}

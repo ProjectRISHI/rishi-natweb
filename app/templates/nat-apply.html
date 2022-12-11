@@ -1,0 +1,121 @@
+{% extends "skeleton.html" %}
+
+    {% block navbar %}
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <li>
+                        <a href="{{ url_for('projects') }}"><h5>Projects</h5></a>
+                    </li>            
+                    <li>
+                        <a href="{{ url_for('chapters') }}"><h5>Chapters</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blog') }}"><h5>Blog</h5></a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}"><h5>About</h5></a>
+                    </li>
+                    <li style="padding-top:5px;">
+                        <a class="btn btn-default btn-sm btn-navbar" href="{{ url_for('donate') }}"><h5>DONATE</h5></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% endblock %}
+        
+
+    {% block header %}
+    <header class="intro_sub chap">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p align="left" class="brand-heading">Project RISHI National Team Application</p>
+                        <p align="left" class="intro-text">If you are interested in joining us on our mission, please apply to be a part of our National Team.</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <!-- Small Green Border -->
+    <div class="apply"></div>
+    {% endblock %}
+
+    {% block section %}
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 style="color:#5d5d5d">National Team Application</h3>
+                    <br>
+                    <p style="color:#5d5d5d">Project RISHI National Team consists of entrepreneurs, educators, business leaders, developers, students, and more who believe deeply in the power of innovation and initiative to improve social and health conditions in rural India. Our team provides central support and resources to all our partner chapters so we can remain aligned on our mission. See below for open opportunities.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h4 style="color:#4A4A4A">Open Positions</h4><br>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Initiatives</a> (3 Positions)</strong><br>
+                        Driving force of our Initiatives Pod. The RISHI Initiative team maintains relations with university partners to carry out all our developing initiatives in the Village. This team works directly with Assistant Directors to evaluate and maintain a core repository of our projects. 
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Content and Blog</a> (1 Position)</strong><br>
+                        Our blog attracts readers from all over the globe. The Director of Content and Blog will lead and execute all content curation for our Project RISHI Blog - The RISHI Perspective. They will also leverage our Medium platform to keep our donors updated and work with partner chapters to produce engaging content. 
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Special Projects</a> (1 Position)</strong><br>
+                        The Director of Special Projects will be the main lead of the RISHI Special Projects Pod. This is a new pod dedicated to the development and incubation for all our new tools and resources. The Director will collaborate with all pods to effectively integrate tools into the RISHI ecosystem.  Furthermore, the Director of Special Projects will help define a guiding framework for further innovation in our ecosystem. 
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Research: Education Curriculum</a> (2 Positions)</strong><br>
+                        Over the years, we have collected a plethora of resources and data from our work. We are looking for leaders to develop monthly syllabi for chapters to use to engage students with RISHI topics. The topics will include methodology, social enterprises, fundraising methods, etc.  Our goal is to have a dynamic yet easily executable curriculum that all our university chapters can integrate within their weekly meetings. The Director of Research will be part of our newly formed RISHI Special Projects Pod. 
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Research: Social Enterprise</a> (1 Position)</strong><br>
+                        We are looking for someone to help build an in-house Social Enterprise Database that our partner chapters can leverage for all our initiatives. The Director will collaborate RISHI pods to create this database and work with Operations to deploy it online. The Director of Research will be part of the newly form RISHI Special Projects Pod.  
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Marketing Associate</a> (1 Position)</strong><br>
+                        The creative genius behind our outreach channels and a direct impact to our brand. In the past year we've started building our marketing strategy and redesigned our look. We've soared from 1,000 to 12,000 facebook followers, and have aggressive goals to triple it within the next year. We're growing our Instagram user base and figuring out how to leverage Twitter best. We're extending our reach and focussing on a global outreach program. Work alongside the Marketing Directors to be a part of RISHI's vision, and the driving force behind our team's execution. 
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Secretary</a> (2 Positions)</strong><br>
+                        Secretaries connect our partner chapters to the National Team. They provide administrative support to all RISHI Pods and curate and manage all communication with our university chapters. They organize all our organization resources and maintain a consistent repository for our media for website integration.  This year, they will also work with our Marketing team to enforce our new branding guidelines.
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Special Events & Alumni Relations</a> (1 Position)</strong><br>
+                        Last year, our team deployed an Annual Events form to help all University Chapters plan out successful events. The Director of Special Events & Alumni Relations will own this tool end to end in helping chapters carry out all events with ease. Using these learnings, the director will be spearheading our Annual Conference OneRISHI.  Furthermore, the Director will organize and maintain strong communication with our alumni. 
+                    </p>
+                    <p align="left" style="color:#5d5d5d">
+                        <strong><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1">Director of Chapter Development</a> (2 Positions)</strong><br>
+                        Our organization continues to grow each year. The Director of Chapter Development will serve as the official advisor for the interested interim chapters. They will supervise and guide newer chapters in achieving the goals, mission, and values of the organization. They will also serve as the point of contact for all interested universities. 
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portfolio-item">
+                        <a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1" ><img align="middle" class="img-portfolio img-circle" height="165" width="165" src="http://s3.projectrishi.org/img/icon.png"></a>
+                    </div>
+                    <h4 style="color:#4A4A4A">Project RISHI National Team</h4>
+                    <p style="color:#5d5d5d">Application Deadline: <strong>June 26 2017</strong> <br>
+                        For more information contact:<br> <strong>contact@projectrishi.org</strong> <br>
+                    </p>
+                    <p><a href="http://goo.gl/forms/KEHv5zo6YWtUBH0k1" class="btn btn-default btn-lg">Apply</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
