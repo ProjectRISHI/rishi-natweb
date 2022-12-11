@@ -1,7 +1,6 @@
 import os
 from flask import Flask,request,render_template
 # from flask_cache import Cache
-from flask_compress import Compress
 from lib import gscrape
 from time import time
 
