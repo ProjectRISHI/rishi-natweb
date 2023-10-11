@@ -23,6 +23,7 @@ def index():
 def about():
 	cur.execute('''SELECT * FROM users''') 
 	data = cur.fetchall()
+	conn.close()
 	return render_template("about.html", title="About", national=data)
 
 # @app.route('/apply')
