@@ -1,45 +1,16 @@
 import os
 from flask import Flask,request,render_template
-# import lib.gscrape
 from time import time
-
-chap = "1BPnZpUqYNw-W9NI8aCIfI-OqL4DNCZf2r1YfEb5gOB0"
-marq = "15odV2nwZvLJLvBi5g51Ma8UsgN2WSCKiDt0JeyhEthw"
-natmem = "1VTqQ4nyNBbff_ykGOGt0vdnRly8r93ja01sJVWVCgmw"
-uclaexec= "19hPOVSAqWRPMGoVySLVjMoywA2o4ukMS3tRoEh8SmXY"
-ucbexec = "17KCKd-x8WL5NJHL1dnFex3zHAfSGCqrqCsC0q6Fqljw"
-ucsdexec = ""
-ucdexec = "19AzcQmIH7r94H1QV0qpP89lOKWWkLdvBjIEMw7ibHUU"
-uciexec = "1YalAaHrQH8b9Fd41sWw9-komgr70-vBPE8SV2oo5mzY"
-nuexec = "1EcKGSB41tkJhRVVOAvS5hOs0cd2dZAnk7dfW3leg5V0"
-ucrexec = "1qdgh2YRp13qg1i5ZZXaLwzkR1hODkBOsaddrcPVPMYo"
-uscexec = "1-baaza5A86lOv445NoGUzER1Q3TQp4ZBuEqU2TzASjw"
-cppexec = "1Vrt5w6o5Mo3Ths2VzaSjDoprwbvVh7enRy600Ck5gUY"
-purdueexec = ""
-drexelexec = "1CZDdMQ4zt6rTuPVvRNHrMO0n85jkNknZ17ZcMc-q7N0"
+import psycopg2
 
 app = Flask(__name__)
-# app.config['CACHE_TYPE'] = 'simple'
-# app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 300
-# app.cache=Cache(app)
-# Compress(app)
 
-# @app.cache.cached(key_prefix="marquee")
-# def get_marquee():
-# 	return gscrape.getMarqueeFeed(marq)
+conn = psycopg2.connect(database=os.environ['database'], 
+                            user=os.environ['user'], 
+                            password=os.environ['pass'], 
+                            host=os.environ['host'], port="5432")
 
-# @app.cache.cached(key_prefix="appfeed")
-# def get_appfeed():
-# 	return gscrape.getAppFeed(chap)
-
-# @app.cache.cached(key_prefix="natmem")
-# def get_national_members():
-# 	return gscrape.getMemberFeed(natmem)
-
-# @app.cache.cached(key_prefix="memberfeed")
-# def get_member_feed():
-# 	return map(gscrape.getMemberFeed,(uclaexec,ucbexec,
-# 		ucsdexec,ucdexec,uciexec,nuexec,ucrexec,uscexec,cppexec,purdueexec,drexelexec))
+cur = conn.cursor() 
 
 @app.route('/')
 def index():
@@ -50,9 +21,9 @@ def index():
 
 @app.route('/about')
 def about():
-	# nat_mem=get_national_members()
-	# return render_template("about.html", title="About", national=nat_mem)
-	return render_template("about.html", title="About",)
+	cur.execute('''SELECT * FROM users''') 
+	data = cur.fetchall()
+	return render_template("about.html", title="About", national=data)
 
 # @app.route('/apply')
 # def apply():
