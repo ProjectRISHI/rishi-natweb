@@ -19,10 +19,8 @@ chapter_data = db["chapters"]
 
 @app.route('/')
 def index():
-	# marquee=get_marquee()
-	# chap=get_appfeed()
-	# return render_template("index.html", title="Home",chapters=chap)
-	return render_template("index.html", title="Home")
+	chapters_data = chapter_data.find({"is_active":True})
+	return render_template("index.html", title="Home",chapters=chapters_data)
 
 @app.route('/about')
 def about():
