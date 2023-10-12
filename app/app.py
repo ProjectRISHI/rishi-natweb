@@ -1,16 +1,20 @@
 import os
 from flask import Flask,request,render_template
 from time import time
-import psycopg2
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+from urllib.parse import quote_plus
 
 app = Flask(__name__)
 
-conn = psycopg2.connect(database=os.environ['database'], 
-                            user=os.environ['user'], 
-                            password=os.environ['pass'], 
-                            host=os.environ['host'], port="5432")
+user=quote_plus(os.environ['user'])
+password= quote_plus(os.environ['pass'])
 
-cur = conn.cursor() 
+uri = "mongodb+srv://"+user+":"+password+"@cluster0.kgvimec.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri, server_api=ServerApi('1'))
+
+db = client.rishi_natweb
+users = db["users"]
 
 @app.route('/')
 def index():
@@ -21,9 +25,10 @@ def index():
 
 @app.route('/about')
 def about():
-	cur.execute('''SELECT * FROM users''') 
-	data = cur.fetchall()
-	conn.close()
+	# cur.execute('''SELECT * FROM users''') 
+	# data = cur.fetchall()
+	# conn.close()
+	data = users.find()
 	return render_template("about.html", title="About", national=data)
 
 # @app.route('/apply')

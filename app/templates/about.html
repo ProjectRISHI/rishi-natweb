@@ -72,10 +72,11 @@
         {% for n in national %}
         <div class="col-md-3">
             <div class="portfolio-item">
-                <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="https://res.cloudinary.com/dixxe5spq/image/upload/v1696905462/projectrishi/nat-team/{{ n[5] }}">
+                <img align="middle" class="img-portfolio img-circle" height="165" width="165" src="https://res.cloudinary.com/dixxe5spq/image/upload/v1696905462/projectrishi/nat-team/{{ n['slug'] }}">
             </div>
-            <h5 style="color:#5d5d5d">{{ n[1] }} {{ n[2] }}</h5>
-            <!-- <p style="color:#5d5d5d">{{ n[3] }}<br><a href="mailto:{{ n[4] }}"><font color="#21A54A">Contact</font></a> -->
+            <h5 style="color:#5d5d5d">{{ n['first_name'] }} {{ n['last_name'] }}</h5>
+            <p style="color:#5d5d5d">{{ n['position'] }}
+                <!-- <br><a href="mailto:{{ n['email'] }}"><font color="#21A54A">Contact</font></a> -->
             </p>
         </div>
         {% endfor %}      
