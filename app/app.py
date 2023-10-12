@@ -15,6 +15,7 @@ client = MongoClient(uri, server_api=ServerApi('1'))
 
 db = client.rishi_natweb
 users = db["users"]
+chapter_data = db["chapters"]
 
 @app.route('/')
 def index():
@@ -25,9 +26,6 @@ def index():
 
 @app.route('/about')
 def about():
-	# cur.execute('''SELECT * FROM users''') 
-	# data = cur.fetchall()
-	# conn.close()
 	data = users.find()
 	return render_template("about.html", title="About", national=data)
 
@@ -40,15 +38,10 @@ def about():
 def blog():
 	return render_template("blog.html", title="Blog")
 
-# @app.route('/chapters')
-# def chapters():
-# 	# memfeed=get_member_feed()
-# 	# chap=get_appfeed()
-# 	# return render_template("chapters.html", title="Chapters",
-# 	# 	chapter=chap,uclae=memfeed[0],ucbe=memfeed[1],ucsde=memfeed[2],
-# 	# 	ucde=memfeed[3],ucie=memfeed[4],nue=memfeed[5],ucre=memfeed[6],
-# 	# 	usce=memfeed[7],cppe=memfeed[8],purduee=memfeed[9],drexele=memfeed[10])
-# 	return render_template("chapters.html", title="Chapters")
+@app.route('/chapters')
+def chapters():
+	chapters_data = chapter_data.find({"is_active":True})
+	return render_template("chapters.html", title="Chapters",chapters=chapters_data)
 
 @app.route('/donate')
 def donate():
